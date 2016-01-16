@@ -1,0 +1,631 @@
+<style>
+      .thumbnail { height: 280px !important; }
+      .btn-droppable { width: 180px; height: 30px; padding-left: 4px; }
+      .btn-draggable { width: 160px; }
+      .emage { height: 215px; }
+      .elements {
+          padding: 20px;
+      }
+      .dropsy {
+          /*background-color: lightgray;*/
+      }
+      .dropField {
+          min-height: 100px;
+      }
+      
+      .obrazek {
+          background: url("assets/images/os1.png");
+          height: 100px;    
+          width: 100px
+      }
+      
+      .cyf1 {
+          background: url("assets/images/cyf1.png");
+          height: 100px;
+          width: 100px
+      }
+      .cyf2 {
+          background: url("assets/images/cyf2.png");
+          height: 100px;
+          width: 100px
+      }
+      .cyf3 {
+          background: url("assets/images/cyf3.png");
+          height: 100px;
+          width: 100px
+      }
+      .la1 {
+          background: url("assets/images/la1.png");
+          height: 100px;
+          width: 100px
+      }
+      .la2 {
+          background: url("assets/images/la2.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .la3 {
+          background: url("assets/images/la3.png");
+          height: 100px;
+          width: 100px
+      }
+      .la4 {
+          background: url("assets/images/la4.png");
+          height: 100px;
+          width: 100px
+      }
+      .la5 {
+          background: url("assets/images/la5.png");
+          height: 100px;
+          width: 100px
+      }
+      .la8 {
+          background: url("assets/images/la8.png");
+          height: 100px;
+          width: 100px
+      }
+      .led1 {
+          background: url("assets/images/led1.png");
+          height: 100px;
+          width: 100px
+      }
+      .led2 {
+          background: url("assets/images/led2.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .os1 {
+          background: url("assets/images/os1.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .os2 {
+          background: url("assets/images/os2.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .os3 {
+          background: url("assets/images/os3.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .os4 {
+          background: url("assets/images/os4.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .os5 {
+          background: url("assets/images/os5.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .r1 {
+          background: url("assets/images/r1.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .r3 {
+          background: url("assets/images/r3.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .r9 {
+          background: url("assets/images/r9.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .r11 {
+          background: url("assets/images/r11.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .r13 {
+          background: url("assets/images/r13.png");
+          height: 100px;
+          width: 100px
+      }
+      
+      .czerwony {
+          background-color: red;
+      }
+      
+      
+      .colors {
+			width:900px;
+			margin:0 auto;
+			overflow-y:auto;
+			max-height: 434px;
+		}
+        
+		.colors .col {
+			display: inline;
+			float: left;
+			width: 11.5%;
+			margin-left:1%;
+			text-align: center;
+		}
+        
+		.colors .rcolor {
+			height: 40px;
+		}
+        
+		.colors .col.first{
+			margin-left:0;
+			clear: left;
+		}
+</style>
+
+<div class="container" >
+
+  <div>
+    <acme-navbar creation-date="polowy6.creationDate"></acme-navbar>
+  </div>
+
+  <div class="jumbotron text-center" >
+      <div class="panel panel-default">
+          <div class="panel-body">
+      
+      <div class="page-header text-center" style="background-color: orange;">
+    <h2 style="padding-top: 10px;">KROK2 SZABLON</h2>
+      </div>
+    <p class="lead">
+      <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>-->
+    </p>
+    <div class="col-md-12">
+        <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
+        <select name="room" class="btn btn-warning col-md-6" ng-model="polowy6.room">wybierz pomieszczenie...
+            <option value="sypialnia">Sypialnia</option>
+            <option value="kuchnia">Kuchnia</option>
+            <option value="lazienka">Lazienka</option>
+            <option value="goscinny">Pokoj goscinny</option>
+        </select>
+    </div>
+    <br><br>
+    <div class="col-md-12">
+    <label for="palette" class="col-md-6">Kolor szkła:</label>
+    <button name="palette" ng-click="polowy6.colorChange()"  class=" btn btn-warning col-md-6">wybierz kolor...</button>
+    <br><br>
+    <label for="chosenColor" class="col-md-6">Wybrany kolor:</label>
+            <div name="chosenColor" class="btn col-md-6" style="background-color: {{polowy6.chosenColor.color}}">{{polowy6.chosenColor.name}}</div>
+    </div>
+    <br><br>&nbsp<br><br>
+    
+    
+
+    <div class="col-md-12" style="padding-left: 100px" ng-show="polowy6.color">
+         <br><br>
+        <b>Proszę kliknąć na pożądany kolor:</b>
+        <br><br>
+        <b>Najczęściej wybierane kolory:</b><br><br>
+        <div  ng-repeat="item in polowy6.ral0">
+            <button class="btn col-md-2" ng-click="polowy6.assignColor(polowy6.ral0[$index].ralname, polowy6.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{polowy6.ral0[$index].ralcolor}}">{{polowy6.ral0[$index].ralname}}</button>    
+        </div>
+        <br><br>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <br><br>
+        <div  ng-repeat="item in polowy6.ral">
+            <button class="btn col-md-2" ng-click="polowy6.assignColor(polowy6.ral[$index].ralname, polowy6.ral[$index].ralcolor)" style="margin: 5px;background-color: {{polowy6.ral[$index].ralcolor}}">{{polowy6.ral[$index].ralname}}</button>    
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    
+    <!--<div class="colors">
+        <script>
+            $('.colors').html(ral_html(8));
+        </script>
+    </div>-->
+
+       
+   
+    <!-- element przeciagajacy-->
+    
+    
+    <div class="container" style="padding: 0px;">
+        <div class="panel panel-default">
+          <div class="panel-body">
+        <div class=col-md-12>
+        <h3>Przeciągnij i upuść element w pożądanym miejscu: </h3>                        
+        </div>
+        <div class=col-md-12>
+            Kategorie: <button name="palette" ng-click="polowy6.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy6.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy6.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy6.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy6.showRolety()"  class=" btn"><u>rolety</u></button>
+        </div>        
+        
+        <div class="cyfry" ng-show="polowy6.cyfry">
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf1" data-drop="true" ng-model='polowy6.cyf1' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                    <!--{{item.title}}-->
+                </div>
+            </div>
+            
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf2" data-drop="true" ng-model='polowy6.cyf2' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf3" data-drop="true" ng-model='polowy6.cyf3' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="lampy" ng-show="polowy6.lampy">
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la1" data-drop="true" ng-model='polowy6.la1' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                    <!--{{item.title}}-->
+                </div>
+            </div>
+        
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la2" data-drop="true" ng-model='polowy6.la2' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                    <!--{{item.title}}-->
+                </div>
+            </div>
+        
+            <div class="col-md-3 elements">
+                <div class="container form-inline" style="text-align: center;">
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la3" data-drop="true" ng-model='polowy6.la3' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                        </div>
+                    </div>
+                    <!--{{item.title}}-->
+                </div>
+            </div>
+            
+            <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la8" data-drop="true" ng-model='polowy6.la8' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable la8" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la8" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+            
+        </div>
+        
+        
+        <div class="ledy" ng-show="polowy6.led">
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.led1" data-drop="true" ng-model='polowy6.led1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable led1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.led1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.led2" data-drop="true" ng-model='polowy6.led2' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable led2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.led2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        </div>
+        
+        <div class="oswietlenie" ng-show="polowy6.oswietlenie">
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os1" data-drop="true" ng-model='polowy6.os1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os2" data-drop="true" ng-model='polowy6.os2' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os3" data-drop="true" ng-model='polowy6.os3' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os4" data-drop="true" ng-model='polowy6.os4' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os4" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        </div>
+        
+      
+        <div class="rolety" ng-show="polowy6.rolety">
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r1" data-drop="true" ng-model='polowy6.r1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>   
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r3" data-drop="true" ng-model='polowy6.r3' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r9" data-drop="true" ng-model='polowy6.r9' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r9" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r9" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+      
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r13" data-drop="true" ng-model='polowy6.r13' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r13" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r13" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+                <!--{{item.title}}-->
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+         
+    </div>
+
+            
+
+    
+    
+    <!-- tutaj ma byc nowa wersja z obrazkiem-->
+    
+    <!--<div class="container form-inline" style="text-align: center;">
+        <div class="col-md-4">
+            <div class="obrazek btn btn-droppable" style="width: 100px;height: 150px;" ng-repeat="item in polowy6.test2" data-drop="true" ng-model="polowy6.test2" jqyoui-droppable="{index:{{$index}}}">&nbsp</div>
+                <div class="btn btn-info btn-draggable" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.test2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">{{item.title}}</div>
+        </div>
+    </div>-->
+    
+    
+    
+    <!--koniec elementu-->
+
+    
+    <div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+        <!-- SIATECZKA 3x2, pola droppable-->
+        <div class="container" style="border: 2px solid gray; padding: 50px; ">
+            <div class="row">
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element1">
+                
+                <div ng-repeat="elem in polowy6.elem1">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField"
+                        style="width: 110px;height: 110px; border: solid 1px gray"   data-drop="true" ng-model='polowy6.elem1' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <!--{{polowy6.elem1[$index].title}}-->
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem1[$index].title" data-drag="{{polowy6.elem1[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="btn btn-droppable dropsy" data-drop="true" ng-model='polowy6.list1' jqyoui-droppable="{index: 0, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                    <div class="btn btn-info btn-draggable" ng-show="polowy6.list1[$index].title" data-drag="{{polowy6.list1[0].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list1" jqyoui-draggable="{index: 0,placeholder:true,animate:true}">{{polowy6.list1[0].title}}
+                    </div>
+                </div>-->
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element2">
+                <div ng-repeat="elem in polowy6.elem2">     
+                    <div>
+                        <!--{{polowy6.elem2[$index].title}}-->
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem2' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem2[$index].title" data-drag="{{polowy6.elem2[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element3">
+                <div ng-repeat="elem in polowy6.elem3">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem3' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem3[$index].title" data-drag="{{polowy6.elem3[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4" style="border: 2px solid gray; height: 155px;"></div>
+            <div class="col-sm-4" >
+                <input style="margin:10px" type="text" value="element4">
+                <div ng-repeat="elem in polowy6.elem4">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem4' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem4[$index].title" data-drag="{{polowy6.elem4[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element5">
+                <div ng-repeat="elem in polowy6.elem5">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem5' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem5[$index].title" data-drag="{{polowy6.elem5[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element6">
+                <div ng-repeat="elem in polowy6.elem6">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem6' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem6[$index].title" data-drag="{{polowy6.elem6[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem6" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- tutaj idzie drag drop -->
+        <!--<h2>Przeciągnij i upuść element w pożądanym miejscu: </h2>
+        
+        <div class="navbar-inner">
+        <div class="container form-inline" style="text-align: center;">
+          <div class="btn btn-droppable" ng-repeat="item in polowy6.list5" data-drop="true" ng-model='polowy6.list5' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=polowy6.list5])'}"  jqyoui-droppable="{index: {{$index}}}">
+            <div class="btn btn-info btn-draggable" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}" ng-hide="!item.title">{{item.title}}</div>
+          </div>
+        </div>
+      </div>
+        
+        <div class='contentWrapper ng-cloak'>
+        <div class='content'>
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="col-md-4" style='margin-left:10px;'>
+                <div class="thumbnail" data-drop="true" ng-model='polowy6.list1' data-jqyoui-options="polowy6.optionsList1" jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in polowy6.list1" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list1" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4" style='margin-left:10px;'>
+                <div class="thumbnail" data-drop="true" ng-model='polowy6.list2' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=polowy6.list2])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in polowy6.list2" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list2" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4" style='margin-left:10px;'>
+                <div class="thumbnail" data-drop="true" ng-model='polowy6.list3' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=polowy6.list3])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in polowy6.list3" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list3" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-md-4" style='margin-left:10px;'>
+                <div class="thumbnail" data-drop="true" ng-model='polowy6.list4' data-jqyoui-options="{accept:'.btn-draggable:not([ng-model=polowy6.list4])'}"  jqyoui-droppable="{multiple:true}">
+                  <div class="caption">
+                    <div class="btn btn-info btn-draggable" ng-repeat="item in polowy6.list4" ng-show="item.title" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.list4" jqyoui-draggable="{index: {{$index}},animate:true}">{{item.title}}</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>-->
+      
+      
+        
+        <!-- koniec drag drop-->
+</div>
+</div>
+    </div>
+    
+
+    
+    <!--<p class="animated infinite" ng-class="polowy6.classAnimation">
+      <button type="button" class="btn btn-lg btn-success" ng-click="polowy6.showToastr()">Splendid Toastr</button>
+    </p>-->
+    <!--<p>
+      With ♥ thanks to the contributions of<acme-malarkey extra-values="['Yeoman', 'Gulp', 'Angular']"></acme-malarkey>
+    </p>-->
+  </div>
+
+  <!--<div class="row">
+    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in polowy6.awesomeThings | orderBy:'rank'">
+      <div class="thumbnail">
+        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
+        <div class="caption">
+          <h3>{{ awesomeThing.title }}</h3>
+          <p>{{ awesomeThing.description }}</p>
+          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+</div>

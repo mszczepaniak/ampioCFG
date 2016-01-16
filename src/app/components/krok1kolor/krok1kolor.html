@@ -1,0 +1,70 @@
+<div class="container">
+  <div>
+    <acme-navbar creation-date="krok1controller.creationDate"></acme-navbar>
+  </div>
+
+  <div class="jumbotron text-center">
+    <div class="panel panel-default">
+          <div class="panel-body">
+      
+      <div class="page-header text-center" style="background-color: orange;">
+        <h2 style="padding-top: 10px;">KROK1 : Wybór pomieszczenia, koloru i szablonu</h2>
+      </div>
+        <p class="lead">
+        <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>-->
+        </p>
+        <div class="col-md-12">
+            <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
+            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.room">wybierz pomieszczenie...
+                <option value="sypialnia">Sypialnia</option>
+                <option value="kuchnia">Kuchnia</option>
+                <option value="lazienka">Lazienka</option>
+                <option value="goscinny">Pokoj goscinny</option>
+            </select>
+        </div>
+        <br><br>
+        <div class="col-md-12">
+        <label for="palette" class="col-md-6">Kolor szkła:</label>
+        <button name="palette" ng-click="krok1controller.colorChange()"  class=" btn btn-warning col-md-6">wybierz kolor...</button>
+        <br><br>
+        <label for="chosenColor" class="col-md-6">Wybrany kolor:</label>
+                <div name="chosenColor" class="btn col-md-6" style="background-color: {{krok1controller.chosenColor.color}}">{{krok1controller.chosenColor.name}}</div>
+        </div>
+        <br>&nbsp<br>
+    
+    
+    <div class="col-md-12" style="padding-left: 100px" ng-show="krok1controller.color">
+  
+        <b>Proszę kliknąć na pożądany kolor:</b>
+        <br><br>
+        <b>Najczęściej wybierane kolory:</b><br><br>
+        <div  ng-repeat="item in krok1controller.ral0">
+            <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral0[$index].ralname, krok1controller.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{krok1controller.ral0[$index].ralcolor}}">{{krok1controller.ral0[$index].ralname}}</button>    
+        </div>
+  
+        <div  ng-repeat="item in krok1controller.ral">
+            <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral[$index].ralname, krok1controller.ral[$index].ralcolor)" style="margin: 5px;background-color: {{krok1controller.ral[$index].ralcolor}}">{{krok1controller.ral[$index].ralname}}</button>    
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+            <label for="szablon" class="col-md-6">Wybrany szablon:</label>
+            <select name="szablon" class="btn btn-warning col-md-6" ng-model="krok1controller.szablon">wybierz szablon...
+                <option value="dotyk6">Szablon dotyk 6 LCD</option>
+                <option value="dotyk9">Szablon dotyk 9</option>
+                <option value="dotyk15">Szablon dotyk 15 LCD</option>
+                <option value="dotyk18">Szablon dotyk 18</option>
+            </select>
+    </div>
+    
+    <button class="btn col-md-2 btn-warning" style="margin: 10px;float:right;"
+            ng-click="krok1controller.goToSzablon()">Dalej
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+</div>
+
