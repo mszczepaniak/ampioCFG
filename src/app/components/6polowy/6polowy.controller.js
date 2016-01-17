@@ -6,12 +6,15 @@
     .controller('Szablon6Controller', Szablon6Controller);
 
   /** @ngInject */
-  function Szablon6Controller($timeout) {
+  function Szablon6Controller($timeout, $state) {
     var vm = this;
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.room = '';
     vm.creationDate = 1451913357644;
+    
+    vm.goToPodziekowanie = goToPodziekowanie;
+    vm.goToKrok1Kolor = goToKrok1Kolor;
     
     vm.cyf1 = [
         { 'title': 'cyf1', 'drag': true }
@@ -135,7 +138,15 @@
     };
     
     function goToPodziekowanie() {
+        console.log('blabla')
         $state.go('podziekowanie');
+    }
+    
+    function goToKrok1Kolor() {
+        console.log('blabla')
+        
+        $state.go('krok1kolor');
+        
     }
     
     // Cyfry

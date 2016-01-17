@@ -26,7 +26,7 @@
         controller: 'Szablon9Controller',
         controllerAs: 'polowy9'
       })
-      .state('krok1kolor', {
+      .state('krok1kolor', { 
           url: '/krok1kolor',
           templateUrl: 'app/components/krok1kolor/krok1kolor.html',
           controller: 'Krok1KolorController',
