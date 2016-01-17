@@ -3,10 +3,10 @@
 
   angular
     .module('ampio')
-    .controller('Szablon6Controller', Szablon6Controller);
+    .controller('Szablon9Controller', Szablon9Controller);
 
   /** @ngInject */
-  function Szablon6Controller($timeout) {
+  function Szablon9Controller($timeout, webDevTec, toastr) {
     var vm = this;
     vm.awesomeThings = [];
     vm.classAnimation = '';
@@ -134,35 +134,33 @@
         console.log('I`m not, hehe');
     };
     
-    function goToPodziekowanie() {
-        $state.go('podziekowanie');
-    }
-    
     // Cyfry
+    
     vm.cyfry = false;
     vm.showDigits = function () {
         vm.cyfry = !vm.cyfry;
     };
     
     // Lampy
+    
     vm.lampy = false;
     vm.showLamps = function () {
         vm.lampy = !vm.lampy;
     };
     
-    // Led
+    // led
     vm.led = false;
     vm.showLeds = function () {
         vm.led = !vm.led;
     };
     
-    //Oswietlenie
+    // oswietlenie
     vm.oswietlenie = false;
     vm.showOswietlenie = function () {
         vm.oswietlenie = !vm.oswietlenie;
     };
     
-    //Rolety
+    // rolety
     vm.rolety = false;
     vm.showRolety = function () {
         vm.rolety = !vm.rolety;

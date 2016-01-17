@@ -20,11 +20,23 @@
         controller: 'Szablon6Controller',
         controllerAs: 'polowy6'
       })
+      .state('polowy9', {
+        url: '/polowy9',
+        templateUrl: 'app/components/9polowy/9polowy.html',
+        controller: 'Szablon9Controller',
+        controllerAs: 'polowy9'
+      })
       .state('krok1kolor', {
           url: '/krok1kolor',
           templateUrl: 'app/components/krok1kolor/krok1kolor.html',
           controller: 'Krok1KolorController',
           controllerAs: 'krok1controller'  
+      })
+      .state('podziekowanie', {
+          url: '/podziekowanie',
+          templateUrl: 'app/components/podziekowanie/podziekowanie.html',
+          controller: 'PodziekowanieController',
+          controllerAs: 'podziekowanie'  
       })
 
     $urlRouterProvider.otherwise('/');
