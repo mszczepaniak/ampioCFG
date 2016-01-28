@@ -170,8 +170,8 @@
       <p class="lead">
       <img src="assets/images/measure.jpg" style="width: 426px; height: 170px;" alt="Ampio">
         </p>
-      <div class="page-header text-center" style="border: 5px solid #f0ad4e;">
-    <h2 style="padding-top: 10px;">Krok drugi : dopasowanie szablonu</h2>
+      <div class="page-header text-center" style="border: 2px solid #f0ad4e;">
+    <h2>Krok drugi : dopasowanie szablonu</h2>
       </div>
     
   
@@ -190,7 +190,7 @@
         <h3>Przeciągnij i upuść element w pożądanym miejscu: </h3>                        
         </div>
         <div class=col-md-12>
-            Kategorie: <button name="palette" ng-click="polowy6.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy6.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy6.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy6.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy6.showRolety()"  class=" btn"><u>rolety</u></button>
+            Wybierz kategorię: <button name="palette" ng-click="polowy6.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy6.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy6.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy6.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy6.showRolety()"  class=" btn"><u>rolety</u></button>
         </div>        
         
         <div class="cyfry" ng-show="polowy6.cyfry">
@@ -373,14 +373,14 @@
         <div class="container" style="border: 2px solid gray; padding: 50px; ">
             <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element1">
+                <input style="margin:10px" type="text" value="element1" ng-model="polowy6.label1">
                 
                 <div ng-repeat="elem in polowy6.elem1">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField"
                         style="width: 110px;height: 110px; border: solid 1px gray"   data-drop="true" ng-model='polowy6.elem1' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
                             <!--{{polowy6.elem1[$index].title}}-->
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem1[$index].title" data-drag="{{polowy6.elem1[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped1" ng-show="polowy6.elem1[$index].title" data-drag="{{polowy6.elem1[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -388,11 +388,11 @@
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element2">
+                <input style="margin:10px" type="text" value="element2" ng-model="polowy6.label2">
                 <div ng-repeat="elem in polowy6.elem2">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem2' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem2[$index].title" data-drag="{{polowy6.elem2[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped2" ng-show="polowy6.elem2[$index].title" data-drag="{{polowy6.elem2[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -401,11 +401,11 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element3">
+                <input style="margin:10px" type="text" value="element3" ng-model="polowy6.label3">
                 <div ng-repeat="elem in polowy6.elem3">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem3' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem3[$index].title" data-drag="{{polowy6.elem3[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped3" ng-show="polowy6.elem3[$index].title" data-drag="{{polowy6.elem3[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -413,11 +413,11 @@
             </div>
             <div class="col-sm-4" style="border: 2px solid gray; height: 155px;"></div>
             <div class="col-sm-4" >
-                <input style="margin:10px" type="text" value="element4">
+                <input style="margin:10px" type="text" value="element4" ng-model="polowy6.label4">
                 <div ng-repeat="elem in polowy6.elem4">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem4' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem4[$index].title" data-drag="{{polowy6.elem4[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped4" ng-show="polowy6.elem4[$index].title" data-drag="{{polowy6.elem4[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -426,11 +426,11 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element5">
+                <input style="margin:10px" type="text" value="element5" ng-model="polowy6.label5">
                 <div ng-repeat="elem in polowy6.elem5">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem5' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem5[$index].title" data-drag="{{polowy6.elem5[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped5" ng-show="polowy6.elem5[$index].title" data-drag="{{polowy6.elem5[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -438,11 +438,11 @@
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element6">
+                <input style="margin:10px" type="text" value="element6" ng-model="polowy6.label6">
                 <div ng-repeat="elem in polowy6.elem6">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem6' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem6[$index].title" data-drag="{{polowy6.elem6[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem6" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped6" ng-show="polowy6.elem6[$index].title" data-drag="{{polowy6.elem6[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem6" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
@@ -451,11 +451,11 @@
         </div>
         
         </div>
-        <button class="btn col-md-2 btn-warning" style="margin: 10px;float:right;"
+        <button class="btn col-md-2" style="margin-top: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"
             ng-click="polowy6.goToPodziekowanie()">Dalej
         </button>
         
-        <button class="btn col-md-2 btn-warning" style="margin: 10px;float:left;"
+        <button class="btn col-md-2" style="margin-top: 15px;float:left; border: 2px solid #f0ad4e; background-color: white;"
             ng-click="polowy6.goToKrok1Kolor()">Wstecz
         </button>
         

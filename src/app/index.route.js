@@ -15,13 +15,15 @@
         controllerAs: 'main'
       })
       .state('polowy6', {
-        url: '/polowy6',
+        url: '/polowy6?pomieszczenie&kolor&szablon',
+        params: {'pomieszczenie': null, 'kolor': null, 'szablon': null},
         templateUrl: 'app/components/6polowy/6polowy.html',
         controller: 'Szablon6Controller',
         controllerAs: 'polowy6'
       })
       .state('polowy9', {
         url: '/polowy9',
+        params: {'pomieszczenie': null, 'kolor': null, 'szablon': null},
         templateUrl: 'app/components/9polowy/9polowy.html',
         controller: 'Szablon9Controller',
         controllerAs: 'polowy9'
@@ -34,10 +36,11 @@
       })
       .state('podziekowanie', {
           url: '/podziekowanie',
+          params: {'test': null},
           templateUrl: 'app/components/podziekowanie/podziekowanie.html',
           controller: 'PodziekowanieController',
           controllerAs: 'podziekowanie'  
-      })
+      });
 
     $urlRouterProvider.otherwise('/');
   }

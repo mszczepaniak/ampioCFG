@@ -161,15 +161,17 @@
 <div class="container" >
 
   <div>
-    <acme-navbar creation-date="polowy6.creationDate"></acme-navbar>
+    <acme-navbar creation-date="polowy9.creationDate"></acme-navbar>
   </div>
 
   <div class="jumbotron text-center" >
       <div class="panel panel-default">
           <div class="panel-body">
-      
-      <div class="page-header text-center" style="background-color: orange;">
-    <h2 style="padding-top: 10px;">KROK2 SZABLON</h2>
+      <p class="lead">
+      <img src="assets/images/measure.jpg" style="width: 426px; height: 170px;" alt="Ampio">
+        </p>
+      <div class="page-header text-center" style="border: 5px solid #f0ad4e;">
+    <h2 style="padding-top: 10px;">Krok drugi : dopasowanie szablonu</h2>
       </div>
     
   
@@ -188,14 +190,14 @@
         <h3>Przeciągnij i upuść element w pożądanym miejscu: </h3>                        
         </div>
         <div class=col-md-12>
-            Kategorie: <button name="palette" ng-click="polowy6.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy6.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy6.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy6.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy6.showRolety()"  class=" btn"><u>rolety</u></button>
+            Wybierz kategorię: <button name="palette" ng-click="polowy9.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy9.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy9.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy9.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy9.showRolety()"  class=" btn"><u>rolety</u></button>
         </div>        
         
-        <div class="cyfry" ng-show="polowy6.cyfry">
+        <div class="cyfry" ng-show="polowy9.cyfry">
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf1" data-drop="true" ng-model='polowy6.cyf1' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable cyf1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.cyf1" data-drop="true" ng-model='polowy9.cyf1' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.cyf1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
@@ -203,8 +205,8 @@
             
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf2" data-drop="true" ng-model='polowy6.cyf2' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable cyf2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.cyf2" data-drop="true" ng-model='polowy9.cyf2' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.cyf2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
@@ -212,19 +214,19 @@
             
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.cyf3" data-drop="true" ng-model='polowy6.cyf3' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable cyf3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.cyf3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.cyf3" data-drop="true" ng-model='polowy9.cyf3' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable cyf3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.cyf3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="lampy" ng-show="polowy6.lampy">
+        <div class="lampy" ng-show="polowy9.lampy">
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la1" data-drop="true" ng-model='polowy6.la1' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable la1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.la1" data-drop="true" ng-model='polowy9.la1' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.la1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
@@ -232,8 +234,8 @@
         
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la2" data-drop="true" ng-model='polowy6.la2' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable la2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.la2" data-drop="true" ng-model='polowy9.la2' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.la2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
@@ -241,8 +243,8 @@
         
             <div class="col-md-3 elements">
                 <div class="container form-inline" style="text-align: center;">
-                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la3" data-drop="true" ng-model='polowy6.la3' jqyoui-droppable="{index: {{$index}}}">
-                        <div class="btn btn-info btn-draggable la3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                    <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.la3" data-drop="true" ng-model='polowy9.la3' jqyoui-droppable="{index: {{$index}}}">
+                        <div class="btn btn-info btn-draggable la3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.la3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                         </div>
                     </div>
                 </div>
@@ -250,8 +252,8 @@
             
             <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.la8" data-drop="true" ng-model='polowy6.la8' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable la8" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.la8" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.la8" data-drop="true" ng-model='polowy9.la8' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable la8" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.la8" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -260,11 +262,11 @@
         </div>
         
         
-        <div class="ledy" ng-show="polowy6.led">
+        <div class="ledy" ng-show="polowy9.led">
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.led1" data-drop="true" ng-model='polowy6.led1' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable led1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.led1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.led1" data-drop="true" ng-model='polowy9.led1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable led1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.led1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -272,29 +274,20 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.led2" data-drop="true" ng-model='polowy6.led2' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable led2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.led2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.led2" data-drop="true" ng-model='polowy9.led2' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable led2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.led2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
         </div>
         </div>
         
-        <div class="oswietlenie" ng-show="polowy6.oswietlenie">
+        <div class="oswietlenie" ng-show="polowy9.oswietlenie">
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os1" data-drop="true" ng-model='polowy6.os1' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable os1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-3 elements">
-            <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os2" data-drop="true" ng-model='polowy6.os2' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable os2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.os1" data-drop="true" ng-model='polowy9.os1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.os1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -302,8 +295,8 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os3" data-drop="true" ng-model='polowy6.os3' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable os3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.os2" data-drop="true" ng-model='polowy9.os2' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os2" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.os2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -311,8 +304,17 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.os4" data-drop="true" ng-model='polowy6.os4' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable os4" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.os4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.os3" data-drop="true" ng-model='polowy9.os3' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.os3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3 elements">
+            <div class="container form-inline" style="text-align: center;">
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.os4" data-drop="true" ng-model='polowy9.os4' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable os4" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.os4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -320,12 +322,12 @@
         </div>
         
       
-        <div class="rolety" ng-show="polowy6.rolety">
+        <div class="rolety" ng-show="polowy9.rolety">
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r1" data-drop="true" ng-model='polowy6.r1' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable r1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.r1" data-drop="true" ng-model='polowy9.r1' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r1" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.r1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -333,8 +335,8 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r3" data-drop="true" ng-model='polowy6.r3' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable r3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.r3" data-drop="true" ng-model='polowy9.r3' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r3" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.r3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -342,8 +344,8 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r9" data-drop="true" ng-model='polowy6.r9' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable r9" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r9" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.r9" data-drop="true" ng-model='polowy9.r9' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r9" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.r9" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -352,8 +354,8 @@
         
         <div class="col-md-3 elements">
             <div class="container form-inline" style="text-align: center;">
-                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy6.r13" data-drop="true" ng-model='polowy6.r13' jqyoui-droppable="{index: {{$index}}}">
-                    <div class="btn btn-info btn-draggable r13" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.r13" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy6.startCallback(item, $index)', onStop: 'polowy6.stopCallback', onDrag: 'polowy6.dragCallback'}" ng-hide="!item.title">    
+                <div class="btn btn-droppable dropsy" style="width: 110px;height: 110px; border: solid 1px gray" ng-repeat="item in polowy9.r13" data-drop="true" ng-model='polowy9.r13' jqyoui-droppable="{index: {{$index}}}">
+                    <div class="btn btn-info btn-draggable r13" data-drag="{{item.drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.r13" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true, onStart:'polowy9.startCallback(item, $index)', onStop: 'polowy9.stopCallback', onDrag: 'polowy9.dragCallback'}" ng-hide="!item.title">    
                     </div>
                 </div>
             </div>
@@ -367,87 +369,147 @@
     <div>
         <div class="panel panel-default">
           <div class="panel-body">
-        <!-- SIATECZKA 3x2, pola droppable-->
+        <!-- SIATECZKA 3x3, pola droppable-->
         <div class="container" style="border: 2px solid gray; padding: 50px; ">
+            <!--rzad 1-->
             <div class="row">
-            <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element1">
                 
-                <div ng-repeat="elem in polowy6.elem1">     
+            <!--element 1    -->
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element1" ng-model="polowy9.label1">
+                
+                <div ng-repeat="elem in polowy9.elem1">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField"
-                        style="width: 110px;height: 110px; border: solid 1px gray"   data-drop="true" ng-model='polowy6.elem1' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <!--{{polowy6.elem1[$index].title}}-->
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem1[$index].title" data-drag="{{polowy6.elem1[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                        style="width: 110px;height: 110px; border: solid 1px gray"   data-drop="true" ng-model='polowy9.elem1' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <!--{{polowy9.elem1[$index].title}}-->
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped1" ng-show="polowy9.elem1[$index].title" data-drag="{{polowy9.elem1[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem1" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4"></div>
+            <!--element 2-->
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element2">
-                <div ng-repeat="elem in polowy6.elem2">     
+                <input style="margin:10px" type="text" value="element2" ng-model="polowy9.label2">
+                <div ng-repeat="elem in polowy9.elem2">     
                     <div>
-                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem2' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem2[$index].title" data-drag="{{polowy6.elem2[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem2' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped2" ng-show="polowy9.elem2[$index].title" data-drag="{{polowy9.elem2[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem2" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!--element 3-->
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element3" ng-model="polowy9.label3">
+                <div ng-repeat="elem in polowy9.elem3">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem3' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped3" ng-show="polowy9.elem3[$index].title" data-drag="{{polowy9.elem3[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        
+        <!--rzad 2-->
         <div class="row">
-            <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element3">
-                <div ng-repeat="elem in polowy6.elem3">     
-                    <div>
-                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem3' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem3[$index].title" data-drag="{{polowy6.elem3[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem3" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="border: 2px solid gray; height: 155px;"></div>
+            
+            <!--element 4-->
             <div class="col-sm-4" >
-                <input style="margin:10px" type="text" value="element4">
-                <div ng-repeat="elem in polowy6.elem4">     
+                <input style="margin:10px" type="text" value="element4" ng-model="polowy9.label4">
+                <div ng-repeat="elem in polowy9.elem4">     
                     <div>
-                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem4' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem4[$index].title" data-drag="{{polowy6.elem4[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem4' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped4" ng-show="polowy9.elem4[$index].title" data-drag="{{polowy9.elem4[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem4" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!--element 5-->
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element5" ng-model="polowy9.label5">
+                <div ng-repeat="elem in polowy9.elem5">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem5' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped5" ng-show="polowy9.elem5[$index].title" data-drag="{{polowy9.elem5[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--element 6-->
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element6" ng-model="polowy9.label6">
+                <div ng-repeat="elem in polowy9.elem6">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem6' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped6" ng-show="polowy9.elem6[$index].title" data-drag="{{polowy9.elem6[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem6" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
         <div class="row">
+            <!--element 7-->
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element5">
-                <div ng-repeat="elem in polowy6.elem5">     
+                <input style="margin:10px" type="text" value="element7" ng-model="polowy9.label7">
+                <div ng-repeat="elem in polowy9.elem7">     
                     <div>
-                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem5' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem5[$index].title" data-drag="{{polowy6.elem5[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem5" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem7' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped7" ng-show="polowy9.elem7[$index].title" data-drag="{{polowy9.elem7[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem7" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-4"></div>
+            
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element6">
-                <div ng-repeat="elem in polowy6.elem6">     
+                <input style="margin:10px" type="text" value="element8" ng-model="polowy9.label8">
+                <div ng-repeat="elem in polowy9.elem8">     
                     <div>
-                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem6' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
-                            <div class="btn btn-info btn-draggable" ng-class="polowy6.dropped" ng-show="polowy6.elem6[$index].title" data-drag="{{polowy6.elem6[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy6.elem6" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem8' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped7" ng-show="polowy9.elem8[$index].title" data-drag="{{polowy9.elem8[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem8" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="col-sm-4">
+                <input style="margin:10px" type="text" value="element9" ng-model="polowy9.label9">
+                <div ng-repeat="elem in polowy9.elem9">     
+                    <div>
+                        <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy9.elem9' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy9.dropCallback', onOver: 'polowy9.overCallback', onOut: 'polowy9.outCallback'}">
+                            <div class="btn btn-info btn-draggable" ng-class="polowy9.dropped7" ng-show="polowy9.elem9[$index].title" data-drag="{{polowy9.elem9[$index].drag}}" data-jqyoui-options="{revert: 'invalid'}" ng-model="polowy9.elem9" jqyoui-draggable="{index: {{$index}},placeholder:true,animate:true}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
         </div>
+        
         </div>
+        <button class="btn col-md-2" style="margin-top: 15px;float:right; border: 5px solid #f0ad4e; background-color: white;"
+            ng-click="polowy9.goToPodziekowanie()">Dalej
+        </button>
+        
+        <button class="btn col-md-2" style="margin-top: 15px;float:left; border: 5px solid #f0ad4e; background-color: white;"
+            ng-click="polowy9.goToKrok1Kolor()">Wstecz
+        </button>
+        
 </div>
 </div>
     </div>

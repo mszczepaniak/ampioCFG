@@ -3,21 +3,27 @@
     <acme-navbar creation-date="krok1controller.creationDate"></acme-navbar>
   </div>
 
-  <div class="jumbotron text-center">
+  <div class="jumbotron">
     <div class="panel panel-default">
-          <div class="panel-body">
+          <div class="panel-body" style="float: center;">
       <p class="lead">
-      <img src="assets/images/colour.png" style="width: 726px; height: 370px;" alt="Ampio"><br><br>
+              <img src="assets/images/colour.png" style="width: 726px; height: 370px; margin-left: 130px;" alt="Ampio"><br><br>
+ 
+    
         </p>
-      <div class="page-header text-center" style="border: 5px solid #f0ad4e;">
-        <h2 style="padding-top: 10px;" >Krok pierwszy : Wybór pomieszczenia, koloru i szablonu</h2>
+      <div class="page-header text-center" style="border: 2px solid #f0ad4e; margin-bottom: 50px; margin-left: 10px; margin-right: 10px;">
+        <h2>Krok pierwszy : Wybór pomieszczenia, koloru i szablonu</h2>
       </div>
+      </div>
+      </div>
+      <div class="panel panel-default">
+          <div class="panel-body">
         <p class="lead">
         <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>-->
         </p>
         <div class="col-md-12">
             <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
-            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.room">wybierz pomieszczenie...
+            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.pomieszczenie">wybierz pomieszczenie...
                 <option value="sypialnia">Sypialnia</option>
                 <option value="kuchnia">Kuchnia</option>
                 <option value="lazienka">Lazienka</option>
@@ -34,19 +40,25 @@
         </div>
         <br>&nbsp<br>
     
-    
+    <br>
     <div class="col-md-12" style="padding-left: 100px" ng-show="krok1controller.color">
   
-        <b>Proszę kliknąć na pożądany kolor:</b>
+        <b><span style="margin-left:140px;">W celu wyboru proszę kliknąć na pożądany kolor. Najczęściej wybierane:</span></b>
         <br><br>
-        <b>Najczęściej wybierane kolory:</b><br><br>
-        <div  ng-repeat="item in krok1controller.ral0">
-            <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral0[$index].ralname, krok1controller.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{krok1controller.ral0[$index].ralcolor}}">{{krok1controller.ral0[$index].ralname}}</button>    
+        <div class="col-md-12" style="margin-bottom: 40px;">
+            <div  ng-repeat="item in krok1controller.ral0">
+                <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral0[$index].ralname, krok1controller.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{krok1controller.ral0[$index].ralcolor}}">{{krok1controller.ral0[$index].ralname}}</button>    
+            </div>
         </div>
+        
+        <div class="col-md-12">
+            <div  ng-repeat="item in krok1controller.ral">
+                <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral[$index].ralname, krok1controller.ral[$index].ralcolor)" style="margin: 5px;background-color: {{krok1controller.ral[$index].ralcolor}}">{{krok1controller.ral[$index].ralname}}</button>    
+            </div>    
+        </div>
+        
   
-        <div  ng-repeat="item in krok1controller.ral">
-            <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral[$index].ralname, krok1controller.ral[$index].ralcolor)" style="margin: 5px;background-color: {{krok1controller.ral[$index].ralcolor}}">{{krok1controller.ral[$index].ralname}}</button>    
-        </div>
+        
     </div>
     
     <div class="col-md-12">
@@ -58,8 +70,8 @@
                 <option value="dotyk18">Szablon dotyk 18</option>
             </select>
     </div>
-    
-    <button class="btn col-md-2 btn-warning" style="margin: 10px;float:right;"
+    <br><br><br>
+    <button class="btn col-md-2 " style="margin: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"
             ng-click="krok1controller.goToSzablon()">Dalej
     </button>
     

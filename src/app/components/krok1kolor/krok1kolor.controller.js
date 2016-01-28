@@ -8,6 +8,7 @@
   /** @ngInject */
   function Krok1KolorController($timeout, $state) {
     var vm = this;
+    vm.pomieszczenie = '';
     vm.goToSzablon = goToSzablon;
     vm.ampioSign = '';
     vm.szablon = '';
@@ -30,7 +31,7 @@
     
     function goToSzablon() {
         if(vm.szablon === 'dotyk6')
-            $state.go('polowy6');
+            $state.go('polowy6', {'pomieszczenie': vm.pomieszczenie, 'kolor': vm.chosenColor.color, 'szablon': vm.szablon});
         if(vm.szablon === 'dotyk9')
             $state.go('polowy9');
         if(vm.szablon === 'dotyk15')
@@ -63,8 +64,6 @@
     ];
     
     vm.ral = [
-        
-        
         {ralcolor: 'rgb(205, 186, 136)', ralname: 'Green beige'},
         {ralcolor: 'rgb(210, 170, 109)', ralname: 'Sand yellow'},
         {ralcolor: 'rgb(249, 168, 0)', ralname: 'Signal yellow'},
