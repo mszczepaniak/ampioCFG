@@ -2,7 +2,7 @@
     'use strict';
     
     angular.module('ampio')
-    .factory('cache', function($sacheFactory) {
+    .factory('Cache', function($sacheFactory) {
        var cache = $sacheFactory('myCache');
        return cache; 
     });

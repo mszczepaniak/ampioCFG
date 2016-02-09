@@ -6,7 +6,10 @@
         
     /** @ngInject */
     
-    function AppState(){
+    function AppState(Cache){
+        
+        var key = "appState";
+        var appState = "test";
         
         var palantir = {
             name: "Palantir",
@@ -15,16 +18,25 @@
         
         this.list = [palantir];
         
-        var getAppState = function() {
-          // jezeli jest to pobierz, jezeli nie ma to stworz domyslny   
+        var service = {
+            
+        }
+        
+        return service;
+               
+        function getAppState() {
+          // get from cache, if not, create default 
+          var appState = Cache.get(key) || createDefaultAppState();
+          return appState; 
         };
         
-        var setAppState = function(appState) {
-            
+        function setAppState(appState) {
+            Cache.put(key, appState);
         };
         
-        var createDefaultAppState = function() {
-            
+        function createDefaultAppState() {
+            var appState = undefined;
+            return appState;
         };
     }
     
