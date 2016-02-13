@@ -11,15 +11,9 @@
         var key = "appState";
         var appState = "test";
         
-        var palantir = {
-            name: "Palantir",
-            quote: "Any fool can write code"
-        }
-        
-        this.list = [palantir];
-        
         var service = {
-            
+            getAppState : getAppState,
+            setAppState : setAppState
         }
         
         return service;
@@ -35,7 +29,25 @@
         };
         
         function createDefaultAppState() {
-            var appState = undefined;
+            var appState;
+            
+            // sekcja ogolna 
+            var common = {
+                room : undefined,
+                chosenColor : undefined,
+                template : undefined
+            }
+            
+            // 6 polowy
+            var polowy6 = {
+                
+            }
+            // 9 polowy 
+            
+            // 15 polowy
+            
+            // 18 polowy 
+            appState = [common];
             return appState;
         };
     }

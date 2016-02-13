@@ -6,8 +6,11 @@
     .controller('Krok1KolorController', Krok1KolorController);
 
   /** @ngInject */
-  function Krok1KolorController($timeout, $state) {
+  function Krok1KolorController($timeout, $state, AppState) {
     var vm = this;
+    AppState.setAppState('PALANTIR')
+    console.log('APP STATE')
+    console.log(AppState.getAppState())
     vm.pomieszczenie = '';
     vm.goToSzablon = goToSzablon;
     vm.ampioSign = '';

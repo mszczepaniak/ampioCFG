@@ -8,8 +8,7 @@
   /** @ngInject */
   function Szablon6Controller($timeout, $state, $stateParams, AppState) {
     var vm = this;
-    console.log(AppState.list);
-    console.log($stateParams)
+    AppState.getAppState();
     vm.kolorek = $stateParams.kolor;
     console.log(vm.kolorek);
     

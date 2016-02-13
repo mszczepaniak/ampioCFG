@@ -2,8 +2,8 @@
     'use strict';
     
     angular.module('ampio')
-    .factory('Cache', function($sacheFactory) {
-       var cache = $sacheFactory('myCache');
+    .factory('Cache', function($cacheFactory) {
+       var cache = $cacheFactory('myCache');
        return cache; 
     });
 })();
