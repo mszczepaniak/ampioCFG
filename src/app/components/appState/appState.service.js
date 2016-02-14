@@ -29,25 +29,26 @@
         };
         
         function createDefaultAppState() {
-            var appState;
+            var appState = {
+                // sekcja ogolna
+                common: {
+                    room : 'a',
+                    chosenColor : {
+                        name: 'a',
+                        color: 'b',
+                    },
+                    chosenTemplate : 'c'
+                },
+                // 6 polowy
+                template6 : {},
+                //9 polowy
+                template9: {},
+                //15 polowy
+                template15: {},
+                //18 polowy
+                template18: {}
+            };
             
-            // sekcja ogolna 
-            var common = {
-                room : 'a',
-                chosenColor : 'b',
-                template : 'c'
-            }
-            
-            // 6 polowy
-            var polowy6 = {
-                
-            }
-            // 9 polowy 
-            
-            // 15 polowy
-            
-            // 18 polowy 
-            appState = {common};
             return appState;
         };
     }

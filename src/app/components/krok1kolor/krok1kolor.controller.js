@@ -192,7 +192,7 @@
         {ralcolor: 'rgb(88, 127, 64)', ralname: 'May green'},
         {ralcolor: 'rgb(97, 153, 59)', ralname: 'Yellow green'},
         {ralcolor: 'rgb(185, 206, 172)', ralname: 'Pastel green'},
-        {ralcolor: 'rgb(55, 66, 47)', ralname: 'Chrome green'},
+        {ralcolor: 'rgb(5                                                                                                                                                                                                                                                                    5, 66, 47)', ralname: 'Chrome green'},
         {ralcolor: 'rgb(138, 153, 119)', ralname: 'Pale green'},
         {ralcolor: 'rgb(58, 51, 39)', ralname: 'Olive drab'},
         

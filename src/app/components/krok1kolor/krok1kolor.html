@@ -24,7 +24,7 @@
         <div class="col-md-12">
             <pre></pre>
             <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
-            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.appState">wybierz pomieszczenie...
+            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.appState.room">wybierz pomieszczenie...
                 <option value="sypialnia">Sypialnia</option>
                 <option value="kuchnia">Kuchnia</option>
                 <option value="lazienka">Lazienka</option>
@@ -37,10 +37,10 @@
         <button name="palette" ng-click="krok1controller.colorChange()"  class=" btn btn-warning col-md-6">wybierz kolor...</button>
         <br><br>
         <label for="chosenColor" class="col-md-6">Wybrany kolor:</label>
-                <div name="chosenColor" class="btn col-md-6" style="background-color: {{krok1controller.chosenColor.color}}">{{krok1controller.chosenColor.name}}</div>
+                <div name="chosenColor" class="btn col-md-6" style="background-color: {{krok1controller.appState.common.chosenColor.color}}">{{krok1controller.chosenColor.name}}</div>
         </div>
         <br>&nbsp<br>
-    
+        
     <br>
     <div class="col-md-12" style="padding-left: 100px" ng-show="krok1controller.color">
   
