@@ -8,10 +8,11 @@
   /** @ngInject */
   function Krok1KolorController($timeout, $state, AppState) {
     var vm = this;
-    AppState.setAppState('PALANTIR')
+    
     console.log('APP STATE')
     console.log(AppState.getAppState())
-    vm.pomieszczenie = '';
+    console.log(AppState.common)
+    vm.AppState.common.room = '';
     vm.goToSzablon = goToSzablon;
     vm.ampioSign = '';
     vm.szablon = '';
@@ -27,6 +28,9 @@
     };
     
      vm.assignColor = function(name, color) {
+         console.log('pomieszczenie')
+         console.log(vm.AppState.common.room)
+         
         vm.chosenColor.name = name;
         vm.chosenColor.color = color;
         vm.color = !vm.color;

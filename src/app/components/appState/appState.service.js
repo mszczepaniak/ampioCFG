@@ -33,9 +33,9 @@
             
             // sekcja ogolna 
             var common = {
-                room : undefined,
-                chosenColor : undefined,
-                template : undefined
+                room : 'a',
+                chosenColor : 'b',
+                template : 'c'
             }
             
             // 6 polowy
@@ -47,7 +47,7 @@
             // 15 polowy
             
             // 18 polowy 
-            appState = [common];
+            appState = {common};
             return appState;
         };
     }
