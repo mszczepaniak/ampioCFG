@@ -9,48 +9,76 @@
   function Krok1KolorController($timeout, $state, AppState) {
     var vm = this;
     
-    console.log('APP STATE')
-    console.log(AppState.getAppState())
-    console.log(AppState.common)
-    vm.AppState.common.room = '';
-    vm.goToSzablon = goToSzablon;
-    vm.ampioSign = '';
-    vm.szablon = '';
-    vm.chosenColor = {
-        name: '',
-        color: ''
-    };
+    vm.AppState = AppState.getAppState()
+    
+    // przypisanie app state do lokalnych zmiennych 
+    if(!vm.AppState.common.room) {
+        vm.AppState.common.room = '';
+    }
+    
+    if(!vm.AppState.common.chosenTemplate) {
+        vm.AppState.common.chosenTemplate = '';
+    }  
+    
+    if(!vm.AppState.common.chosenColor) {
+        vm.AppState.common.chosenColor = {
+            name: '',
+            color: ''
+        };
+    } 
+    
+    // routing - przejscie do szablonu
+    vm.goToTemplate = goToTemplate;
     
     // RAL PALETTE
-    vm.color = false;
+    vm.showColors = false;
+    
+    // po kliknieciu na wybierz kolor
     vm.colorChange = function () {
-        vm.color = !vm.color;
+        vm.showColors = !vm.showColors;
     };
     
+    // po kliknieciu na wybrany kolor
      vm.assignColor = function(name, color) {
-         console.log('pomieszczenie')
-         console.log(vm.AppState.common.room)
-         
-        vm.chosenColor.name = name;
-        vm.chosenColor.color = color;
-        vm.color = !vm.color;
+        vm.AppState.common.chosenColor.name = name;
+        vm.AppState.common.chosenColor.color = color;
+        // po wybraniu koloru ukryj kolory
+        vm.showColors = !vm.showColors;
     };
     
-    function goToSzablon() {
-        if(vm.szablon === 'dotyk6')
-            $state.go('polowy6', {'pomieszczenie': vm.pomieszczenie, 'kolor': vm.chosenColor.color, 'szablon': vm.szablon});
-        if(vm.szablon === 'dotyk9')
+    function goToTemplate() {
+        if(vm.AppState.common.chosenTemplate === 'template6') {
+            // przypisanie app state do odpowiedniej wartosci
+            console.log(AppState)
+            AppState.setAppState(vm.AppState);
+            $state.go('polowy6');
+        }
+            
+        if(vm.AppState.common.chosenTemplate === 'template9') {
+            // przypisanie app state do odpowiedniej wartosci
+            AppState.setAppState(vm.AppState);
             $state.go('polowy9');
-        if(vm.szablon === 'dotyk15')
+        }
+        
+        if(vm.AppState.common.chosenTemplate === 'template15') {
+            // przypisanie app state do odpowiedniej wartosci
+            AppState.setAppState(vm.AppState);
             $state.go('polowy15');
-        if(vm.szablon === 'dotyk18')
-            $state.go('polowy18'); 
+        }
+        
+        if(vm.AppState.common.chosenTemplate === 'template18') {
+            // przypisanie app state do odpowiedniej wartosci
+            AppState.setAppState(vm.AppState);
+            $state.go('polowy18');
+        } 
     }
-
+    
+    // RAL
+    // TODO - wyodrebnij do serwisu RalService
     var ralcolor = new Array();
     var ralname = new Array();
 
-
+    // najczesciej wybierane kolory
     vm.ral0 = [
       {ralcolor: 'rgb(236, 236, 231)', ralname: 'Signal white'},
         {ralcolor: 'rgb(43, 43, 44)', ralname: 'Signal black'},
@@ -69,7 +97,7 @@
         {ralcolor: 'rgb(116, 94, 61)', ralname: 'Khaki grey'},
         {ralcolor: 'rgb(121, 77, 62)', ralname: 'Signal brown'}  
     ];
-    
+    // pozostale kolory 
     vm.ral = [
         {ralcolor: 'rgb(205, 186, 136)', ralname: 'Green beige'},
         {ralcolor: 'rgb(210, 170, 109)', ralname: 'Sand yellow'},
@@ -91,9 +119,7 @@
         {ralcolor: 'rgb(246, 182, 0)', ralname: 'Grey beige'},
         {ralcolor: 'rgb(164, 143, 122)', ralname: 'Colza yellow'},
         {ralcolor: 'rgb(186, 143, 76)', ralname: 'Ochre yellow'},
-        
         {ralcolor: 'rgb(167, 127, 14)', ralname: 'Curry'},
-        
         {ralcolor: 'rgb(226, 163, 0)', ralname: 'Broom yellow'},
         {ralcolor: 'rgb(249, 154, 28)', ralname: 'Dahlia yellow'},
         {ralcolor: 'rgb(235, 156, 82)', ralname: 'Pastel yellow'},
@@ -133,7 +159,6 @@
         {ralcolor: 'rgb(207, 105, 85)', ralname: 'Salmon pink'},
         {ralcolor: 'rgb(255, 42, 27)', ralname: 'Luminous bright red'},
         {ralcolor: 'rgb(171, 39, 60)', ralname: 'Raspberry red'},
-        
         {ralcolor: 'rgb(166, 52, 55)', ralname: 'Orient red'},
         {ralcolor: 'rgb(112, 29, 35)', ralname: 'Pearl ruby red'},
         {ralcolor: 'rgb(165, 58, 45)', ralname: 'Pearl pink'},
@@ -158,11 +183,9 @@
         {ralcolor: 'rgb(34, 95, 120)', ralname: 'Azure blue'},
         {ralcolor: 'rgb(0, 79, 124)', ralname: 'Gentian blue'},
         {ralcolor: 'rgb(26, 43, 60)', ralname: 'Steel blue'},
-        
         {ralcolor: 'rgb(25, 49, 83)', ralname: 'Cobalt blue'},
         {ralcolor: 'rgb(99, 125, 150)', ralname: 'Pigeon blue'},
         {ralcolor: 'rgb(0, 124, 176)', ralname: 'Sky blue'},
-        
         {ralcolor: 'rgb(5, 139, 140)', ralname: 'Turquoise blue'},
         {ralcolor: 'rgb(0, 94, 131)', ralname: 'Capri blue'},
         {ralcolor: 'rgb(0, 65, 75)', ralname: 'Ocean blue'},
@@ -192,10 +215,9 @@
         {ralcolor: 'rgb(88, 127, 64)', ralname: 'May green'},
         {ralcolor: 'rgb(97, 153, 59)', ralname: 'Yellow green'},
         {ralcolor: 'rgb(185, 206, 172)', ralname: 'Pastel green'},
-        {ralcolor: 'rgb(5                                                                                                                                                                                                                                                                    5, 66, 47)', ralname: 'Chrome green'},
+        {ralcolor: 'rgb(55, 66, 47)', ralname: 'Chrome green'},
         {ralcolor: 'rgb(138, 153, 119)', ralname: 'Pale green'},
         {ralcolor: 'rgb(58, 51, 39)', ralname: 'Olive drab'},
-        
         {ralcolor: 'rgb(94, 110, 59)', ralname: 'Fern green'},
         {ralcolor: 'rgb(0, 95, 78)', ralname: 'Opal green'},
         {ralcolor: 'rgb(126, 186, 181)', ralname: 'Light green'},
@@ -215,7 +237,6 @@
         {ralcolor: 'rgb(155, 155, 155)', ralname: 'Signal grey'},
         {ralcolor: 'rgb(108, 110, 107)', ralname: 'Mouse grey'},
         {ralcolor: 'rgb(118, 106, 94)', ralname: 'Beige grey'},
-        
         {ralcolor: 'rgb(93, 96, 88)', ralname: 'Green grey'},
         {ralcolor: 'rgb(88, 92, 86)', ralname: 'Tarpaulin grey'},
         {ralcolor: 'rgb(82, 89, 93)', ralname: 'Iron grey'},
@@ -241,14 +262,12 @@
         {ralcolor: 'rgb(152, 158, 161)', ralname: 'Window grey'},
         {ralcolor: 'rgb(142, 146, 145)', ralname: 'Traffic grey A'},
         {ralcolor: 'rgb(79, 82, 80)', ralname: 'Traffic grey B'},
-        
         {ralcolor: 'rgb(141, 146, 149)', ralname: 'Telegrey 1'},
         {ralcolor: 'rgb(127, 134, 138)', ralname: 'Telegrey 2'},
         {ralcolor: 'rgb(200, 200, 199)', ralname: 'Telegrey 4'},
         {ralcolor: 'rgb(129, 123, 115)', ralname: 'Pearl mouse grey'},
         {ralcolor: 'rgb(137, 105, 62)', ralname: 'Green brown'},
         {ralcolor: 'rgb(157, 98, 43)', ralname: 'Ochre brown'},
-        
         {ralcolor: 'rgb(126, 75, 38)', ralname: 'Clay brown'},
         {ralcolor: 'rgb(141, 73, 49)', ralname: 'Copper brown'},
         {ralcolor: 'rgb(112, 69, 42)', ralname: 'Fawn brown'},
@@ -278,7 +297,6 @@
         {ralcolor: 'rgb(200, 203, 196)', ralname: 'Papyrus white'},
         {ralcolor: 'rgb(133, 133, 131)', ralname: 'Pearl light grey'},
         {ralcolor: 'rgb(121, 123, 122)', ralname: 'Pearl dark grey'}
-    ] 
-    
+    ]; 
   }
 })();

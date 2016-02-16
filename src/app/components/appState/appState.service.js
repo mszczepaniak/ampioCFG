@@ -9,7 +9,6 @@
     function AppState(Cache){
         
         var key = "appState";
-        var appState = "test";
         
         var service = {
             getAppState : getAppState,
@@ -32,15 +31,24 @@
             var appState = {
                 // sekcja ogolna
                 common: {
-                    room : 'a',
+                    room : 'sypialnia',
                     chosenColor : {
-                        name: 'a',
-                        color: 'b',
+                        name: 'Light blue',
+                        color: 'rgb(0, 137, 182)',
                     },
-                    chosenTemplate : 'c'
+                    chosenTemplate : 'template6'
                 },
                 // 6 polowy
-                template6 : {},
+                template6 : {
+                    elements : [
+                                    {name: 'elem1', label: 'labelka1', value: 'cyf1'},
+                                    {name: 'elem2', label: 'lab2', value: 'cyf3'},
+                                    {name: 'elem3', label: 'przyklad', value: 'la2'},
+                                    {name: 'elem4', label: 'palantir', value: 'led2'},
+                                    {name: 'elem5', label: 'test', value: 'os4'},
+                                    {name: 'elem6', label: 'kruszek', value: 'r13'},
+                                ]
+                },
                 //9 polowy
                 template9: {},
                 //15 polowy

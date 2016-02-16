@@ -4,79 +4,86 @@
   </div>
 
   <div class="jumbotron">
-    <div class="panel panel-default">
+      <div class="panel panel-default">
           <div class="panel-body" style="float: center;">
-      <p class="lead">
-              <img src="assets/images/colour.png" style="width: 726px; height: 370px; margin-left: 130px;" alt="Ampio"><br><br>
- 
-    
-        </p>
-      <div class="page-header text-center" style="border: 2px solid #f0ad4e; margin-bottom: 50px; margin-left: 10px; margin-right: 10px;">
-        <h2>Krok pierwszy : Wybór pomieszczenia, koloru i szablonu</h2>
+            <p class="lead">
+                    <img src="assets/images/colour.png" style="width: 726px; height: 370px; margin-left: 130px;" alt="Ampio"><br><br>
+        
+            
+            </p>
+            
+            <div class="page-header text-center" style="border: 2px solid #f0ad4e; margin-bottom: 50px; margin-left: 10px; margin-right: 10px;">
+                <h2>Krok pierwszy : Wybór pomieszczenia, koloru i szablonu</h2>
+            </div>
+          </div>
       </div>
-      </div>
-      </div>
+      
       <div class="panel panel-default">
           <div class="panel-body">
-        <p class="lead">
-        <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>-->
-        </p>
-        <div class="col-md-12">
-            <pre></pre>
-            <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
-            <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.appState.room">wybierz pomieszczenie...
-                <option value="sypialnia">Sypialnia</option>
-                <option value="kuchnia">Kuchnia</option>
-                <option value="lazienka">Lazienka</option>
-                <option value="goscinny">Pokoj goscinny</option>
-            </select>
-        </div>
-        <br><br>
-        <div class="col-md-12">
-        <label for="palette" class="col-md-6">Kolor szkła:</label>
-        <button name="palette" ng-click="krok1controller.colorChange()"  class=" btn btn-warning col-md-6">wybierz kolor...</button>
-        <br><br>
-        <label for="chosenColor" class="col-md-6">Wybrany kolor:</label>
-                <div name="chosenColor" class="btn col-md-6" style="background-color: {{krok1controller.appState.common.chosenColor.color}}">{{krok1controller.chosenColor.name}}</div>
-        </div>
-        <br>&nbsp<br>
-        
-    <br>
-    <div class="col-md-12" style="padding-left: 100px" ng-show="krok1controller.color">
-  
-        <b><span style="margin-left:140px;">W celu wyboru proszę kliknąć na pożądany kolor. Najczęściej wybierane:</span></b>
-        <br><br>
-        <div class="col-md-12" style="margin-bottom: 40px;">
-            <div  ng-repeat="item in krok1controller.ral0">
-                <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral0[$index].ralname, krok1controller.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{krok1controller.ral0[$index].ralcolor}}">{{krok1controller.ral0[$index].ralname}}</button>    
+            <p class="lead">
+            <!--<img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>-->
+            </p>
+            <!--wybor pomieszczenia-->
+            <div class="col-md-12">
+                <label for="room" class="col-md-6">Wybrane pomieszczenie:</label>
+                <select name="room" class="btn btn-warning col-md-6" ng-model="krok1controller.AppState.common.room">wybierz pomieszczenie...
+                    <option value="sypialnia">Sypialnia</option>
+                    <option value="kuchnia">Kuchnia</option>
+                    <option value="lazienka">Lazienka</option>
+                    <option value="goscinny">Pokoj goscinny</option>
+                </select>
             </div>
-        </div>
-        
-        <div class="col-md-12">
-            <div  ng-repeat="item in krok1controller.ral">
-                <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral[$index].ralname, krok1controller.ral[$index].ralcolor)" style="margin: 5px;background-color: {{krok1controller.ral[$index].ralcolor}}">{{krok1controller.ral[$index].ralname}}</button>    
-            </div>    
-        </div>
-        
-  
-        
-    </div>
+            <!--wybor koloru-->
+            <br><br>
+            <div class="col-md-12">
+                <label for="palette" class="col-md-6">Kolor szkła:</label>
+                <button name="palette" ng-click="krok1controller.colorChange()"  class=" btn btn-warning col-md-6">wybierz kolor...</button>
+                <br><br>
+                <div ng-show="krok1controller.AppState.common.chosenColor.name">
+                    <label for="chosenColor" class="col-md-6">Wybrany kolor:</label>
+                    <div name="chosenColor" class="btn col-md-6" style="background-color: {{krok1controller.AppState.common.chosenColor.color}}">{{krok1controller.AppState.common.chosenColor.name}}</div>
+                </div>
+                
+            </div>
+            
+            <br>&nbsp<br><br>
     
-    <div class="col-md-12">
-            <label for="szablon" class="col-md-6">Wybrany szablon:</label>
-            <select name="szablon" class="btn btn-warning col-md-6" ng-model="krok1controller.szablon">wybierz szablon...
-                <option value="dotyk6">Szablon dotyk 6 LCD</option>
-                <option value="dotyk9">Szablon dotyk 9</option>
-                <option value="dotyk15">Szablon dotyk 15 LCD</option>
-                <option value="dotyk18">Szablon dotyk 18</option>
-            </select>
-    </div>
-    <br><br><br>
-    <button class="btn col-md-2 " style="margin: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"
-            ng-click="krok1controller.goToSzablon()">Dalej
-    </button>
+            <div class="col-md-12" style="padding-left: 100px" ng-show="krok1controller.showColors">
+        
+                <b><span style="margin-left:140px;">W celu wyboru proszę kliknąć na pożądany kolor. Najczęściej wybierane:</span></b>
+                
+                <br><br>
+                
+                <div class="col-md-12" style="margin-bottom: 40px;">
+                    <div  ng-repeat="item in krok1controller.ral0">
+                        <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral0[$index].ralname, krok1controller.ral0[$index].ralcolor)" style=" margin: 5px; background-color: {{krok1controller.ral0[$index].ralcolor}}">{{krok1controller.ral0[$index].ralname}}</button>    
+                    </div>
+                </div>
+                
+                <div class="col-md-12">
+                    <div  ng-repeat="item in krok1controller.ral">
+                        <button class="btn col-md-2" ng-click="krok1controller.assignColor(krok1controller.ral[$index].ralname, krok1controller.ral[$index].ralcolor)" style="margin: 5px;background-color: {{krok1controller.ral[$index].ralcolor}}">{{krok1controller.ral[$index].ralname}}</button>    
+                    </div>    
+                </div>
+            </div>
     
-    </div>
+            <div class="col-md-12">
+                    <label for="template" class="col-md-6">Wybrany szablon:</label>
+                    
+                    <select name="template" class="btn btn-warning col-md-6" ng-model="krok1controller.AppState.common.chosenTemplate">wybierz szablon...
+                        <option value="template6">Szablon dotyk 6 LCD</option>
+                        <option value="template9">Szablon dotyk 9</option>
+                        <option value="template15">Szablon dotyk 15 LCD</option>
+                        <option value="template18">Szablon dotyk 18</option>
+                    </select>
+            </div>
+            
+            <br><br><br>
+    
+            <button class="btn col-md-2 " style="margin: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"
+                    ng-click="krok1controller.goToTemplate()">Dalej
+            </button>
+        </div>
     
     </div>
     
