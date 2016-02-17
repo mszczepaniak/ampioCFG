@@ -3,10 +3,10 @@
 
   angular
     .module('ampio')
-    .controller('PodziekowanieController', PodziekowanieController);
+    .controller('SummaryController', SummaryController);
 
   /** @ngInject */
-  function PodziekowanieController($location, $window) {
+  function SummaryController($location, $window) {
     var vm = this;
     vm.creationDate = 1452787656155;
     vm.goToAmpio = goToAmpio;

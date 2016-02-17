@@ -16,21 +16,16 @@
     
     
     vm.AppState.template6.elements[0].label='nazwa(opcjonalnie)';
-    vm.label2='nazwa(opcjonalnie)';
+    vm.AppState.template6.elements[1].label='nazwa(opcjonalnie)';
     vm.AppState.template6.elements[2].label='nazwa(opcjonalnie)';
     vm.AppState.template6.elements[3].label='nazwa(opcjonalnie)';
-    vm.label5='nazwa(opcjonalnie)';
-    vm.label6='nazwa(opcjonalnie)';
-    
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.room = '';
+    vm.AppState.template6.elements[4].label='nazwa(opcjonalnie)';
+    vm.AppState.template6.elements[5].label='nazwa(opcjonalnie)';
+  
     vm.creationDate = 1451913357644;
     
     vm.goToThankYouPage = goToThankYouPage;
     vm.goToKrok1Kolor = goToKrok1Kolor;
-    
-    
     
     vm.dropped = '';
     
@@ -38,18 +33,26 @@
         if(title === '')
            return vm.draggedTitle;   
     }
+    // EKSPERYMENT
+    // moze uda sie app state bez radykalnych zmian zaimplementowac
+    vm.elem1 = [{name: 'elem1'}];
+    vm.elem2 = [{name: 'elem2'}];
+    vm.elem3 = [{name: 'elem3'}];
+    vm.elem4 = [{name: 'elem4'}];
+    vm.elem5 = [{name: 'elem5'}];
+    vm.elem6 = [{name: 'elem6'}];
+    // vm.elem1 = vm.AppState.template6.elements[0];
+    // vm.elem2 = vm.AppState.template6.elements[1];
+    // vm.elem3 = vm.AppState.template6.elements[2];
+    // vm.elem4 = vm.AppState.template6.elements[3];
+    // vm.elem5 = vm.AppState.template6.elements[4];
+    // vm.elem6 = vm.AppState.template6.elements[5];
     
-    vm.elem1 = [{'name': 'elem1'}];
-    vm.elem2 = [{'name': 'elem2'}];
-    vm.elem3 = [{'name': 'elem3'}];
-    vm.elem4 = [{'name': 'elem4'}];
-    vm.elem5 = [{'name': 'elem5'}];
-    vm.elem6 = [{'name': 'elem6'}];
     
     vm.startCallback = function(event, ui, title) {
-    console.log('You started draggin: ' + title.title);
+        console.log('You started draggin: ' + title.title);
     
-    vm.draggedTitle = title.title;
+        vm.draggedTitle = title.title;
     };
 
     vm.stopCallback = function(event, ui) {
@@ -125,6 +128,8 @@
     function goToKrok1Kolor() {
         $state.go('krok1kolor');
     }
+    
+    // POKAZ UKRYJ KATEGORIE 
     
     // Cyfry
     vm.cyfry = false;

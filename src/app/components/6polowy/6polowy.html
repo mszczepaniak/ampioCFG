@@ -192,7 +192,9 @@
         </div>
         <div class=col-md-12>
             Wybierz kategorię: <button name="palette" ng-click="polowy6.showDigits()"  class=" btn"><u>cyfry</u></button> <button name="palette" ng-click="polowy6.showLamps()"  class=" btn"><u>lampy</u></button> <button name="palette" ng-click="polowy6.showLeds()"  class=" btn"><u>ledy</u></button> <button name="palette" ng-click="polowy6.showOswietlenie()"  class=" btn"><u>oswietlenie</u></button> <button name="palette" ng-click="polowy6.showRolety()"  class=" btn"><u>rolety</u></button>
-        </div>        
+        </div>    
+        
+        <!--LISTA ELEMENTOW-->
         
         <div class="cyfry" ng-show="polowy6.cyfry">
             <div class="col-md-3 elements">
@@ -374,7 +376,7 @@
         <div class="container" style="border: 2px solid gray; padding: 50px; ">
             <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element1" ng-model="polowy6.label1">
+                <input style="margin:10px" type="text" value="element1" ng-model="polowy6.AppState.template6.elements[0].label">
                 
                 <div ng-repeat="elem in polowy6.elem1">     
                     <div>
@@ -389,7 +391,7 @@
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element2" ng-model="polowy6.label2">
+                <input style="margin:10px" type="text" value="element2" ng-model="polowy6.AppState.template6.elements[1].label">
                 <div ng-repeat="elem in polowy6.elem2">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem2' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
@@ -402,7 +404,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element3" ng-model="polowy6.label3">
+                <input style="margin:10px" type="text" value="element3" ng-model="polowy6.AppState.template6.elements[2].label">
                 <div ng-repeat="elem in polowy6.elem3">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem3' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
@@ -414,7 +416,7 @@
             </div>
             <div class="col-sm-4" style="border: 2px solid gray; height: 155px;"></div>
             <div class="col-sm-4" >
-                <input style="margin:10px" type="text" value="element4" ng-model="polowy6.label4">
+                <input style="margin:10px" type="text" value="element4" ng-model="polowy6.AppState.template6.elements[3].label">
                 <div ng-repeat="elem in polowy6.elem4">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem4' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
@@ -427,7 +429,7 @@
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element5" ng-model="polowy6.label5">
+                <input style="margin:10px" type="text" value="element5" ng-model="polowy6.AppState.template6.elements[4].label">
                 <div ng-repeat="elem in polowy6.elem5">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem5' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">
@@ -439,7 +441,7 @@
             </div>
             <div class="col-sm-4"></div>
             <div class="col-sm-4">
-                <input style="margin:10px" type="text" value="element6" ng-model="polowy6.label6">
+                <input style="margin:10px" type="text" value="element6" ng-model="polowy6.AppState.template6.elements[5].label">
                 <div ng-repeat="elem in polowy6.elem6">     
                     <div>
                         <div class="btn btn-droppable dropsy dropField" style="width: 110px;height: 110px; border: solid 1px gray" data-drop="true" ng-model='polowy6.elem6' jqyoui-droppable="{index: {{$index}}, onDrop:'polowy6.dropCallback', onOver: 'polowy6.overCallback', onOut: 'polowy6.outCallback'}">

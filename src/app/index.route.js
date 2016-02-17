@@ -34,6 +34,12 @@
           controller: 'Krok1KolorController',
           controllerAs: 'krok1controller'  
       })
+      .state('summary', { 
+          url: '/summary',
+          templateUrl: 'app/components/summary/summary.html',
+          controller: 'SummaryController',
+          controllerAs: 'summary'  
+      })
       .state('podziekowanie', {
           url: '/podziekowanie',
           params: {'test': null},
