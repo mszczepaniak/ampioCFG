@@ -1,3 +1,9 @@
+<style>
+    .template {
+        background-color: 
+    }
+</style>
+
 <div class="container">
 
   <div>
@@ -5,43 +11,81 @@
   </div>
 
   <div class="jumbotron text-center">
+      
       <div class="panel panel-default">
-        <div class="panel-body">
+          <div 
+            class="panel-body" 
+            style="float: center;">
+            
             <p class="lead">
-                tutaj wstaw jakis obrazek
+                <img src="assets/images/checkBoxes.jpg" style="width: 726px; height: 370px; margin-left: 130px;" alt="Ampio"><br><br>
             </p>
             
-            <div class="text-center" style="border: 2px solid #f0ad4e;margin-bottom: 20px; margin-top: -100px;">
-            <h2>Krok trzeci : Podsumowanie</h2>
-        </div>
-        </div>
-      
+            <div 
+                class="page-header text-center" 
+                style="border: 2px solid #f0ad4e; margin-bottom: 50px; margin-left: 10px; margin-right: 10px;">
+                <h2>Krok trzeci : Podsumowanie</h2>
+            </div>
+          </div>
       </div>
-      
         <div class="panel panel-default">
-        <div class="panel-body">
-            <div style=" padding: 20px; background-color: #DDD;">
-      <br>
-        <p class="lead">
-        <img src="assets/images/logoMain.png" style="width: 526px; height: 84px;" alt="Ampio"><br><br>
-            Zakończyłeś proces konfiguracji.
-        </p>
-    
-        <p>
-        Formularz został wysłany. Dziękujemy!
-        </p>
-        
-        <p>
-        <button type="button" class="btn btn-lg btn-warning" ng-click="summary.goToAmpio()">Zapraszamy do zapoznania się z innymi produktami Ampio</button>
-        </p>
-        
-        <br><br><br><br><br><br>
-        
-        <p>
-        Projekt powstał w wyniku współpracy z <acme-malarkey extra-values="[ 'Ampio Smart Home ©','Michałem Szczepaniakiem.', 'Michałem Kruszewiczem.']"></acme-malarkey>
-        </p>
+            <div class="panel-body">
+                <div>
+                    <br>
+                    <p class="lead">
+                        Proszę sprawdzić, czy wszystkie informacje się zgadzają.
+                    </p>
+                    <p>Wybrany kolor: {{summary.AppState.common.chosenColor.color}}</p>
+                    <p>Wybrany szablon: {{summary.AppState.common.chosenTemplate}}</p>
+                    <p>Wybrany pokój: {{summary.AppState.common.room}}</p>
+                    
+                    <label 
+                        for="chosenColor" 
+                        class="col-md-6">
+                            Wybrany kolor:
+                    </label>
+                    
+                    <div 
+                        name="chosenColor" 
+                        class="btn col-md-6" 
+                        style="background-color: {{summary.AppState.common.chosenColor.color}}">
+                            {{summary.AppState.common.chosenColor.name}}
+                    </div>
+                    
+                    <!--GRID-->
+                    <!--pierwszy rzad-->
+                    
+                </div>
+                
+                
+            </div>
         </div>
-        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div 
+                    class="template6" 
+                    style="background-color: {{summary.AppState.common.chosenColor.color}}">
+                    
+                    <div class="row">
+                        <div class="col-md-4 templateItem"><div class="square"></div></div>
+                        <div class="col-md-4"><p>&nbsp</p></div>
+                        <div class="col-md-4"><p>test</p></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4"><p>test</p></div>
+                        <div class="col-md-4"><p>kwadrat</p></div>
+                        <div class="col-md-4"><p>test</p></div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-4"><p>test</p></div>
+                        <div class="col-md-4"><p>&nbsp</p></div>
+                        <div class="col-md-4"><p>test</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
         
   </div>

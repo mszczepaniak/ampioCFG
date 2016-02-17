@@ -10,8 +10,7 @@
       
     var vm = this;
     vm.AppState = AppState.getAppState();
-    
-    console.log('APP STATE')
+    console.log('APP STATE template 6')
     console.log(vm.AppState)
     
     
@@ -24,7 +23,7 @@
   
     vm.creationDate = 1451913357644;
     
-    vm.goToThankYouPage = goToThankYouPage;
+    vm.goToSummary = goToSummary;
     vm.goToKrok1Kolor = goToKrok1Kolor;
     
     vm.dropped = '';
@@ -96,33 +95,38 @@
         console.log('I`m not, hehe');
     };
     
-    function goToThankYouPage() {
+    function goToSummary() {
         // Tutaj musze wywolac serwis wysylajacy JSONA pod dany adres 
         
         // stworzenie obiektu do wyslania
         
-        var jsonDoWyslania = new Object();
+        // var jsonDoWyslania = new Object();
     
-        jsonDoWyslania.room = vm.AppState.common.room;
-        jsonDoWyslania.color = vm.AppState.common.chosenColor.color;
-        jsonDoWyslania.template = vm.AppState.common.chosenTemplate;
-        jsonDoWyslania.elements = [
-            {name: 'elem1', label: vm.AppState.template6.elements[0].label, value: vm.elem1[0].title},
-            {name: 'elem2', label: vm.AppState.template6.elements[1].label, value: vm.elem2[0].title},
-            {name: 'elem3', label: vm.AppState.template6.elements[2].label, value: vm.elem3[0].title},
-            {name: 'elem4', label: vm.AppState.template6.elements[3].label, value: vm.elem4[0].title},
-            {name: 'elem5', label: vm.AppState.template6.elements[4].label, value: vm.elem5[0].title},
-            {name: 'elem6', label: vm.AppState.template6.elements[5].label, value: vm.elem6[0].title},
-        ];
-        console.log('JSON do wyslania: ')
-        console.log(jsonDoWyslania)
-        console.log(JSON.stringify(jsonDoWyslania))
-        JSON.stringify(jsonDoWyslania);
-        // tutaj trzeba zrobic ngresource HTTP POSTA
-        alert("Wyslany JSON: " + JSON.stringify(jsonDoWyslania))
-        console.log('Wysylam na serwer... ')        
+        // jsonDoWyslania.room = vm.AppState.common.room;
+        // jsonDoWyslania.color = vm.AppState.common.chosenColor.color;
+        // jsonDoWyslania.template = vm.AppState.common.chosenTemplate;
+        // jsonDoWyslania.elements = [
+        //     {name: 'elem1', label: vm.AppState.template6.elements[0].label, value: vm.elem1[0].title},
+        //     {name: 'elem2', label: vm.AppState.template6.elements[1].label, value: vm.elem2[0].title},
+        //     {name: 'elem3', label: vm.AppState.template6.elements[2].label, value: vm.elem3[0].title},
+        //     {name: 'elem4', label: vm.AppState.template6.elements[3].label, value: vm.elem4[0].title},
+        //     {name: 'elem5', label: vm.AppState.template6.elements[4].label, value: vm.elem5[0].title},
+        //     {name: 'elem6', label: vm.AppState.template6.elements[5].label, value: vm.elem6[0].title},
+        // ];
+        var appStateToSend = vm.AppState;
+        for(var i=0; i<6; i++) {
+            appStateToSend.template6.elements[i].value = vm.elem1[i].title;
+        }
         
-        $state.go('podziekowanie');
+        // console.log('JSON do wyslania: ')
+        // console.log(jsonDoWyslania)
+        // console.log(JSON.stringify(jsonDoWyslania))
+        // JSON.stringify(jsonDoWyslania);
+        // // tutaj trzeba zrobic ngresource HTTP POSTA
+        // alert("Wyslany JSON: " + JSON.stringify(jsonDoWyslania))
+        // console.log('Wysylam na serwer... ')        
+        AppState.setAppState(appStateToSend);
+        $state.go('summary');
     }
     
     function goToKrok1Kolor() {
