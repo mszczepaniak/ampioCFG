@@ -1,6 +1,20 @@
 <style>
     .template {
-        background-color: 
+        background-color: white;
+    }
+    
+    .square {
+        margin: 20px 100px;
+        border-radius: 15px;
+        border: 2px solid darkslategray;
+        padding: 20px; 
+        width: 100px;
+        height: 100px; 
+    }
+    
+    .kwadrat {
+        border: 2px solid darkslategray;
+        height:230px;        
     }
 </style>
 
@@ -54,10 +68,7 @@
                     
                     <!--GRID-->
                     <!--pierwszy rzad-->
-                    
-                </div>
-                
-                
+                </div>        
             </div>
         </div>
         
@@ -68,21 +79,34 @@
                     style="background-color: {{summary.AppState.common.chosenColor.color}}">
                     
                     <div class="row">
-                        <div class="col-md-4 templateItem"><div class="square"></div></div>
-                        <div class="col-md-4"><p>&nbsp</p></div>
-                        <div class="col-md-4"><p>test</p></div>
+                        <div class="col-md-3 templateItem">
+                            
+                            <div class="square"></div>
+                        </div>
+                        <div class="col-md-6"><p>&nbsp</p></div>
+                        <div class="col-md-3 templateItem">
+                            <div class="square"></div>
+                        </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-md-4"><p>test</p></div>
-                        <div class="col-md-4"><p>kwadrat</p></div>
-                        <div class="col-md-4"><p>test</p></div>
+                        <div class="col-md-3 templateItem">
+                            <div class="square"></div>
+                        </div>
+                        <div class="col-md-6"><div class="kwadrat"></div></div>
+                        <div class="col-md-3 templateItem">
+                            <div class="square"></div>
+                        </div>
                     </div>
                     
                     <div class="row">
-                        <div class="col-md-4"><p>test</p></div>
-                        <div class="col-md-4"><p>&nbsp</p></div>
-                        <div class="col-md-4"><p>test</p></div>
+                        <div class="col-md-3 templateItem">
+                            <div class="square"></div>
+                        </div>
+                        <div class="col-md-6"><p>&nbsp</p></div>
+                        <div class="col-md-3 templateItem">
+                            <div class="square"></div>
+                        </div>
                     </div>
                 </div>
             </div>
