@@ -21,18 +21,6 @@
         height: 100px; 
     }
     
-    .cyf1 {
-          background: url("assets/images/cyf1.png");
-          height: 100px;
-          width: 100px 
-    }
-     
-    .cyf2 {
-        background: url("assets/images/cyf2.png");
-        height: 100px;
-        width: 100px
-    }
-    
     .drawing {
         border: 2px solid darkslategray;
         margin-top: 170px;
@@ -82,7 +70,7 @@
             style="float: center;">
             
             <p class="lead">
-                <img src="assets/images/checkBoxes.jpg" style="width: 726px; height: 370px; margin-left: 130px;" alt="Ampio"><br><br>
+                <img src="assets/images/checks.jpg" style="width: 726px; height: 370px; margin-left: 110px;" alt="Ampio"><br><br>
             </p>
             
             <div 
@@ -129,15 +117,15 @@
                     style="background-color: {{summary.AppState.common.chosenColor.color}}">
                     
                     <div class="col-md-3">
-                      <div class="labelLeft">{{summary.label1}}</div>
+                      <div class="labelLeft">{{summary.label1}} &nbsp</div>
                       <div class="circle circleLeft"></div>
-                      <div class="square cyf2 squareLeft"></div>
-                      <div class="labelLeft">{{summary.label3}}</div>
+                      <div class="square squareLeft" ng-class="summary.AppState.template6.elements[0].value"></div>
+                      <div class="labelLeft">{{summary.label3}} &nbsp</div>
                       <div class="circle circleLeft"></div>
-                      <div class="square squareLeft"></div>
-                      <div class="labelLeft">{{summary.label5}}</div>                      
+                      <div class="square squareLeft" ng-class="summary.AppState.template6.elements[2].value"></div>
+                      <div class="labelLeft">{{summary.label5}}&nbsp</div>                      
                       <div class="circle circleLeft"></div>  
-                      <div class="square squareLeft"></div>                          
+                      <div class="square squareLeft" ng-class="summary.AppState.template6.elements[4].value"></div>                          
                     </div>
                     
                     <div class="col-md-6">
@@ -145,19 +133,29 @@
                     </div>
                     
                     <div class="col-md-3">
-                        <div class="labelRight">{{summary.label2}}</div>
+                        <div class="labelRight">{{summary.label2}} &nbsp</div>
                         <div class="circle circleRight"></div>
-                        <div class="square squareRight"></div>
-                        <div class="labelRight">{{summary.label4}}</div>
+                        <div class="square squareRight" ng-class="summary.AppState.template6.elements[1].value"></div>
+                        <div class="labelRight">{{summary.label4}} &nbsp</div>
                         <div class="circle circleRight"></div>
-                        <div class="square squareRight"></div>
-                        <div class="labelRight">{{summary.label6}}</div>
+                        <div class="square squareRight" ng-class="summary.AppState.template6.elements[3].value"></div>
+                        <div class="labelRight">{{summary.label6}} &nbsp</div>
                         <div class="circle circleRight"></div>  
-                        <div class="square squareRight"></div> 
+                        <div class="square squareRight" ng-class="summary.AppState.template6.elements[5].value"></div> 
                     </div>
                 </div>
             </div>
+            
+            <button class="btn col-md-2" style="margin-top: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"
+                ng-click="summary.goToThankYou()">Dalej
+            </button>
+            
+            <button class="btn col-md-2" style="margin-top: 15px;float:left; border: 2px solid #f0ad4e; background-color: white;"
+                ng-click="summary.goToTemplate6()">Wstecz
+            </button>
         </div>
+        
+        
         
   </div>
 

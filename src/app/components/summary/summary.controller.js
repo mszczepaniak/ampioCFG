@@ -6,7 +6,7 @@
     .controller('SummaryController', SummaryController);
 
   /** @ngInject */
-  function SummaryController($location, $window, AppState) {
+  function SummaryController($location, $window, $state, AppState) {
     var vm = this;
     vm.AppState = AppState.getAppState();
     console.log('APP STATE summary')
@@ -14,6 +14,9 @@
     
     vm.creationDate = 1452787656155;
     vm.goToAmpio = goToAmpio;
+    vm.goToThankYou = goToThankYou;
+    vm.goToTemplate6 = goToTemplate6;
+    
     
     vm.label1 = vm.AppState.template6 ? vm.AppState.template6.elements[0].label : '';
     vm.label2 = vm.AppState.template6 ? vm.AppState.template6.elements[1].label : '';
@@ -24,6 +27,14 @@
     
     function goToAmpio() {
        $window.location.href = 'http://ampio.com.pl/';
+    }
+    
+    function goToThankYou() {
+        $state.go('podziekowanie');
+    }
+    
+    function goToTemplate6() {
+        $state.go('polowy6');
     }
   }
 })();

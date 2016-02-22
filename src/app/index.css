@@ -16,3 +16,81 @@
 .bjorn {
     color: red;
 }
+
+/* ICONS */
+
+.cyf1 {
+    background: url("../assets/images/cyf1.png");
+}
+
+.cyf2 {
+    background: url("../assets/images/cyf2.png");
+}
+.cyf3 {
+    background: url("../assets/images/cyf3.png");
+}
+.la1 {
+    background: url("../assets/images/la1.png");
+}
+.la2 {
+    background: url("../assets/images/la2.png");
+}
+
+.la3 {
+    background: url("../assets/images/la3.png");
+}
+.la4 {
+    background: url("../assets/images/la4.png");
+}
+.la5 {
+    background: url("../assets/images/la5.png");
+}
+.la8 {
+    background: url("../assets/images/la8.png");
+}
+.led1 {
+    background: url("../assets/images/led1.png");
+}
+.led2 {
+    background: url("../assets/images/led2.png");
+}
+
+.os1 {
+    background: url("../assets/images/os1.png");
+}
+
+.os2 {
+    background: url("../assets/images/os2.png");
+}
+
+.os3 {
+    background: url("../assets/images/os3.png");
+}
+
+.os4 {
+    background: url("../assets/images/os4.png");
+}
+
+.os5 {
+    background: url("../assets/images/os5.png");
+}
+
+.r1 {
+    background: url("../assets/images/r1.png");
+}
+
+.r3 {
+    background: url("../assets/images/r3.png");
+}
+
+.r9 {
+    background: url("../assets/images/r9.png");
+}
+
+.r11 {
+    background: url("../assets/images/r11.png");
+}
+
+.r13 {
+    background: url("../assets/images/r13.png");
+}

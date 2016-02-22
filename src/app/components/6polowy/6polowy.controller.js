@@ -114,8 +114,23 @@
         //     {name: 'elem6', label: vm.AppState.template6.elements[5].label, value: vm.elem6[0].title},
         // ];
         var appStateToSend = vm.AppState;
-        for(var i=0; i<6; i++) {
-            appStateToSend.template6.elements[i].value = vm.elem1[i].title;
+        // for(var i=0; i<6; i++) {
+        //     // if user did not provide element name, take blank
+        //     appStateToSend.template6.elements[i].value = vm.elem1[i].title ? vm.elem1[i].title : '';
+        // }
+        
+        // OMG TODO jak bedziesz mial czas to to popraw bo az oczy bola
+        
+        appStateToSend.template6.elements[0].value = vm.elem1[0].title ? vm.elem1[0].title : '';
+        appStateToSend.template6.elements[1].value = vm.elem2[0].title ? vm.elem2[0].title : '';
+        appStateToSend.template6.elements[2].value = vm.elem3[0].title ? vm.elem3[0].title : '';
+        appStateToSend.template6.elements[3].value = vm.elem4[0].title ? vm.elem4[0].title : '';
+        appStateToSend.template6.elements[4].value = vm.elem5[0].title ? vm.elem5[0].title : '';
+        appStateToSend.template6.elements[5].value = vm.elem6[0].title ? vm.elem6[0].title : '';
+        
+        for(var i=0;i<6;i++) {
+            if(appStateToSend.template6.elements[i].label === 'nazwa(opcjonalnie)')
+                appStateToSend.template6.elements[i].label = '';
         }
         
         // console.log('JSON do wyslania: ')
