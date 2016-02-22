@@ -1,25 +1,75 @@
 <style>
+    
+    .labelLeft {
+        margin-left: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .labelRight {
+        margin-right: 30px;
+        margin-bottom: 10px;        
+    }
+    
     .template {
         background-color: white;
     }
     
     .square {
-        margin: 20px 100px;
-        border-radius: 15px;
         border: 2px solid darkslategray;
-        padding: 20px; 
+        margin-bottom:120px;
         width: 100px;
         height: 100px; 
     }
     
-    .kwadrat {
-        border: 2px solid darkslategray;
-        height:230px;        
+    .cyf1 {
+          background: url("assets/images/cyf1.png");
+          height: 100px;
+          width: 100px 
     }
+     
+    .cyf2 {
+        background: url("assets/images/cyf2.png");
+        height: 100px;
+        width: 100px
+    }
+    
+    .drawing {
+        border: 2px solid darkslategray;
+        margin-top: 170px;
+        height: 400px;        
+    }
+    
+    .squareLeft {
+        margin-left: 60px;
+    }
+    
+    .circleLeft {
+        margin-left: 105px;
+        margin-bottom: 20px;
+    }
+    
+    .squareRight {
+        margin-left:20px;
+    }
+    
+    .template6 {
+        margin: 50px 100px;
+    }
+    
+    .circle {
+        border: 2px solid darkslategray;        
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+    }
+    
+    .circleRight {
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+    
 </style>
-
-<div class="container">
-
+ <div class="container">
   <div>
     <acme-navbar creation-date="main.creationDate"></acme-navbar>
   </div>
@@ -46,7 +96,7 @@
             <div class="panel-body">
                 <div>
                     <br>
-                    <p class="lead">
+                    <p class="lead bjorn">
                         Proszę sprawdzić, czy wszystkie informacje się zgadzają.
                     </p>
                     <p>Wybrany kolor: {{summary.AppState.common.chosenColor.color}}</p>
@@ -73,40 +123,37 @@
         </div>
         
         <div class="panel panel-default">
-            <div class="panel-body">
+            <div class="panel-body" style="background-color: {{summary.AppState.common.chosenColor.color}}">
                 <div 
                     class="template6" 
                     style="background-color: {{summary.AppState.common.chosenColor.color}}">
                     
-                    <div class="row">
-                        <div class="col-md-3 templateItem">
-                            
-                            <div class="square"></div>
-                        </div>
-                        <div class="col-md-6"><p>&nbsp</p></div>
-                        <div class="col-md-3 templateItem">
-                            <div class="square"></div>
-                        </div>
+                    <div class="col-md-3">
+                      <div class="labelLeft">{{summary.label1}}</div>
+                      <div class="circle circleLeft"></div>
+                      <div class="square cyf2 squareLeft"></div>
+                      <div class="labelLeft">{{summary.label3}}</div>
+                      <div class="circle circleLeft"></div>
+                      <div class="square squareLeft"></div>
+                      <div class="labelLeft">{{summary.label5}}</div>                      
+                      <div class="circle circleLeft"></div>  
+                      <div class="square squareLeft"></div>                          
                     </div>
                     
-                    <div class="row">
-                        <div class="col-md-3 templateItem">
-                            <div class="square"></div>
-                        </div>
-                        <div class="col-md-6"><div class="kwadrat"></div></div>
-                        <div class="col-md-3 templateItem">
-                            <div class="square"></div>
-                        </div>
+                    <div class="col-md-6">
+                        <div class="drawing">&nbsp</div>
                     </div>
                     
-                    <div class="row">
-                        <div class="col-md-3 templateItem">
-                            <div class="square"></div>
-                        </div>
-                        <div class="col-md-6"><p>&nbsp</p></div>
-                        <div class="col-md-3 templateItem">
-                            <div class="square"></div>
-                        </div>
+                    <div class="col-md-3">
+                        <div class="labelRight">{{summary.label2}}</div>
+                        <div class="circle circleRight"></div>
+                        <div class="square squareRight"></div>
+                        <div class="labelRight">{{summary.label4}}</div>
+                        <div class="circle circleRight"></div>
+                        <div class="square squareRight"></div>
+                        <div class="labelRight">{{summary.label6}}</div>
+                        <div class="circle circleRight"></div>  
+                        <div class="square squareRight"></div> 
                     </div>
                 </div>
             </div>
