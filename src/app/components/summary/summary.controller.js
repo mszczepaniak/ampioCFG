@@ -14,7 +14,7 @@
     
     vm.creationDate = 1452787656155;
     vm.goToAmpio = goToAmpio;
-    vm.goToThankYou = goToThankYou;
+    vm.goToPersonalData = goToPersonalData;
     vm.goToTemplate6 = goToTemplate6;
     
     
@@ -29,8 +29,8 @@
        $window.location.href = 'http://ampio.com.pl/';
     }
     
-    function goToThankYou() {
-        $state.go('podziekowanie');
+    function goToPersonalData() {
+        $state.go('personalData');
     }
     
     function goToTemplate6() {

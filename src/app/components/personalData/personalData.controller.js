@@ -7,10 +7,10 @@
     .controller('PersonalDataController', PersonalDataController);
 
   /** @ngInject */
-  function PersonalDataController($location, $window) {
+  function PersonalDataController($location, $window, AppState) {
     var vm = this;
     vm.AppState = AppState.getAppState();
-    console.log('APP STATE thank you page')
+    console.log('APP STATE personal data page')
     console.log(vm.AppState)
     
     vm.creationDate = 1452787656155;

@@ -40,6 +40,12 @@
           controller: 'SummaryController',
           controllerAs: 'summary'  
       })
+      .state('personalData', { 
+          url: '/personalData',
+          templateUrl: 'app/components/personalData/personalData.html',
+          controller: 'PersonalDataController',
+          controllerAs: 'personalData'  
+      })
       .state('podziekowanie', {
           url: '/podziekowanie',
           params: {'test': null},
