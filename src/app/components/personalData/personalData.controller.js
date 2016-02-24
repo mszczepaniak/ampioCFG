@@ -22,19 +22,43 @@
     
     // variable assignment
     vm.model = {
-        firstName: 'Wpisz imię'
+        
     }
     vm.fields = [
         {
+            key: 'first_name',            
             type: 'input',
-            key: 'firstName',
             templateOptions: {
-                label: 'First Name'
+                type: 'text',
+                label: 'Imię',
+                placeholder: 'Wpisz swoje imię',
+                required: true
             }
         },
         {
             template: '<hr />'
+        },
+        {
+            key: 'last_name',
+            type: 'input',
+            templateOptions: {
+                type: 'text',
+                label: 'Nazwisko',
+                placeholder: 'Wpisz nazwisko',
+                required: true
+            }
+        },
+        {
+            key: 'email',
+            type: 'input',
+            templateOptions: {
+                type: 'email',
+                label: 'Adres email',
+                placeholder: 'Wpisz swój adres email',
+                required: true
+            }
         }
+        
     ];
     
     // copy fields because formly adds data to them 
