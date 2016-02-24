@@ -15,6 +15,11 @@
                 <h2>Krok piąty : formularz</h2>
             </div>
             
+            <form ng-submit="personalData.onSubmit()" novalidate>
+                <formly-form model="personalData.model" fields="personalData.fields" form="personalDataForm">
+                    <button type="submit" class="btn btn-primary" ng-disabled="summary.personalDataForm.$invalid">Submit</button>                
+                </formly-form>
+            </form>
         </div>
       </div>
       
