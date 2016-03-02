@@ -48,6 +48,11 @@
                 required: true
             }
         },
+        
+        {
+            template: '<hr />'
+        },
+        
         {
             key: 'email',
             type: 'input',
@@ -57,7 +62,11 @@
                 placeholder: 'Wpisz swój adres email',
                 required: true
             }
-        }
+        },
+        
+        {
+            template: '<hr />'
+        },
         
     ];
     
