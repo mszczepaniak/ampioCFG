@@ -87,6 +87,15 @@
                 label: 'Adres email',
                 placeholder: 'Wpisz swój adres email',
                 required: true
+            },
+            validators: {
+                ipAddress: {
+                    expression: function(viewValue, modelValue) {
+                        var value = modelValue || viewValue;
+                        return !value || /^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(value);
+                    },
+                    message: '$viewValue + " nie jest poprawnym adresem e-mail"'
+                }
             }
         },
         
