@@ -12,31 +12,20 @@
             </p>
             <br><br><br><br><br>
             <div class="text-center" style="border: 2px solid #f0ad4e;margin-bottom: 20px; margin-top: -100px;">
-                <h2>Krok piąty : formularz</h2>
+                <h2>Krok czwarty : formularz</h2>
             </div>
             
             <form ng-submit="personalData.onSubmit()" novalidate>
                 <formly-form model="personalData.model" fields="personalData.fields" form="personalDataForm">
-                    <button type="submit" class="btn btn-primary" ng-disabled="summary.personalDataForm.$invalid">Wyślij</button>                
+                    <button type="submit" class="btn col-md-2" style="margin-top: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"ng-disabled="summary.personalDataForm.$invalid">Wyślij</button>            
                 </formly-form>
             </form>
+            <button class="btn col-md-2" style="margin-top: 15px;float:left; border: 2px solid #f0ad4e; background-color: white;"
+            ng-click="personalData.goToSummary()">Wstecz
+        </button>  
         </div>
       </div>
       
-      
-        <div class="panel panel-default">
-        <div class="panel-body">
-            <div style=" padding: 20px; background-color: #DDD;">
-      <br>
-        <p class="lead">
-        <img src="assets/images/logoMain.png" style="width: 526px; height: 84px;" alt="Ampio"><br><br>
-            Podaj dane
-        </p>
-    
-       
-        </div>
-        </div>
-        </div>
         
   </div>
 

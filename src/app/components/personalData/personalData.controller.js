@@ -7,12 +7,14 @@
     .controller('PersonalDataController', PersonalDataController);
 
   /** @ngInject */
-  function PersonalDataController($location, $window, AppState) {
+  function PersonalDataController($location, $window, AppState, $state) {
     var vm = this;
 
     // funcation assignment
     vm.goToAmpio = goToAmpio;
+    vm.goToSummary = goToSummary;
     vm.onSubmit = onSubmit;
+    
 
     vm.AppState = AppState.getAppState();
     console.log('APP STATE personal data page')
@@ -76,6 +78,11 @@
     // function definition
     function onSubmit() {
         alert(JSON.stringify(vm.model), null, 2)
+        $state.go('podziekowanie');
+    }
+    
+    function goToSummary() {
+        $state.go('summary');
     }
     
     
