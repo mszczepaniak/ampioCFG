@@ -2,12 +2,36 @@
 (function() {
   'use strict';
 
-  angular
-    .module('ampio')
-    .controller('PersonalDataController', PersonalDataController);
+
+  var app = angular.module('ampio');
+  
+  
+   
+   
+   app.run(function(formlyConfig, formlyValidationMessages, formlyApiCheck) {
+        formlyConfig.setWrapper({
+            name: 'validation',
+            types: ['input', 'customInput'],
+            templateUrl: 'my-messages.html'
+        });
+    
+        formlyValidationMessages.addStringMessage('required', 'To pole jest wymagane');
+        
+        formlyConfig.setType({
+            name: 'customInput',
+            extends: 'input',
+            apiCheck: function(check) {
+                return {
+                    templateOptions: {
+                        foo: check.string.optional
+                    }
+                };
+            }
+        });
+  });
 
   /** @ngInject */
-  function PersonalDataController($location, $window, AppState, $state) {
+  app.controller('PersonalDataController', function PersonalDataController($location, $window, AppState, $state) {
     var vm = this;
 
     // funcation assignment
@@ -23,9 +47,9 @@
     vm.creationDate = 1452787656155;
     
     // variable assignment
-    vm.model = {
-        
-    }
+    vm.model = {};
+    vm.options = {};
+    
     vm.fields = [
         {
             key: 'first_name',            
@@ -90,5 +114,8 @@
     function goToAmpio() {
        $window.location.href = 'http://ampio.com.pl/';
     }
-  }
+    
+  });
+  
+  
 })();
