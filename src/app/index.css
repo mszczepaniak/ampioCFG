@@ -141,3 +141,14 @@
   opacity: 0;
   top: -10px;
 }
+
+#personal_data label{
+    float: left;
+    margin-left: 10px;
+}
+
+.fields {
+    float: left;
+    margin-left: 10px;
+    font-size: 10px;
+}

@@ -16,8 +16,10 @@
             </div>
             
             <form ng-submit="personalData.onSubmit()" novalidate>
-                <formly-form model="personalData.model" fields="personalData.fields" form="personalDataForm" options="personalData.options">
-                    <button type="submit" class="btn col-md-2" style="margin-top: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"ng-disabled="summary.personalDataForm.$invalid">Wyślij</button>            
+                <formly-form id="personal_data" model="personalData.model" fields="personalData.fields" form="personalDataForm" options="personalData.options">
+                    <span class="fields">* Pola obowiązkowe</span>
+                    <br>
+                    <button type="submit" class="btn col-md-2" style="margin-top: 15px;float:right; border: 2px solid #f0ad4e; background-color: white;"ng-disabled="summary.personalDataForm.$invalid">Wyślij</button>        
                 </formly-form>
             </form>
             <button class="btn col-md-2" style="margin-top: 15px;float:left; border: 2px solid #f0ad4e; background-color: white;"
