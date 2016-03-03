@@ -110,15 +110,15 @@
     
     // function definition
     function onSubmit() {
-        alert(JSON.stringify(vm.model), null, 2)
-        $state.go('podziekowanie');
+        if(!vm.personalDataForm.$invalid) {
+            alert(JSON.stringify(vm.model), null, 2)
+            $state.go('podziekowanie');    
+        }
     }
     
     function goToSummary() {
         $state.go('summary');
     }
-    
-    
     
     function goToAmpio() {
        $window.location.href = 'http://ampio.com.pl/';
