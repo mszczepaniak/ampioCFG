@@ -54,7 +54,14 @@
                 //15 polowy
                 template15: {},
                 //18 polowy
-                template18: {}
+                template18: {},
+                
+                personalData: {
+                    first_name:'Michal',
+                    last_name:'Kruszewicz',
+                    email:'michal@kruszewicz.pl'
+                }
+                
             };
             
             return appState;

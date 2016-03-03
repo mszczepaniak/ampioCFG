@@ -6,7 +6,7 @@
     .controller('PodziekowanieController', PodziekowanieController);
 
   /** @ngInject */
-  function PodziekowanieController($location, $window) {
+  function PodziekowanieController($location, $window, AppState) {
     var vm = this;
     vm.AppState = AppState.getAppState();
     console.log('APP STATE thank you page')

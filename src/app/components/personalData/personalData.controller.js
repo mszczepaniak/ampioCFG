@@ -4,11 +4,8 @@
 
 
   var app = angular.module('ampio');
-  
-  
    
-   
-   app.run(function(formlyConfig, formlyValidationMessages, formlyApiCheck) {
+  app.run(function(formlyConfig, formlyValidationMessages, formlyApiCheck) {
         formlyConfig.setWrapper({
             name: 'validation',
             types: ['input', 'customInput'],
@@ -47,7 +44,7 @@
     vm.creationDate = 1452787656155;
     
     // variable assignment
-    vm.model = {};
+    vm.model = vm.AppState.personalData;
     vm.options = {};
     
     vm.fields = [
@@ -111,7 +108,10 @@
     // function definition
     function onSubmit() {
         if(!vm.personalDataForm.$invalid) {
+            console.log(JSON.stringify(vm.model))
             alert(JSON.stringify(vm.model), null, 2)
+            
+            vm.AppState.personalData = vm.model;
             $state.go('podziekowanie');    
         }
     }
